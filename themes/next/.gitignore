@@ -17,3 +17,4 @@ source/lib/font-awesome/scss/
 !source/lib/anime.min.js
 
 !source/lib/velocity/
+!source/lib/pjax
