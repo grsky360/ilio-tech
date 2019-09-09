@@ -8,8 +8,10 @@ subtitle:
 description:
 keywords:
 author: Hyia
-language: zh
+language: zh-CN
 timezone: Asia/Shanghai
+favicon: /images/logo.jpeg
+avatar: /images/avatar.jpg
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
