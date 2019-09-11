@@ -5,4 +5,5 @@ if [ "$PACKAGE_JSON_DIFF" != "" ]; then
     npm install
 fi
 
+npm run clean
 npm run build
