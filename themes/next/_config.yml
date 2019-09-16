@@ -40,10 +40,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/logo-16x16.png
-  medium: /images/logo-32x32.png
-  apple_touch_icon: /images/logo.png
-  safari_pinned_tab: /images/logo.svg
+  small: /images/logo-16x16.jpeg
+  medium: /images/logo-32x32.jpeg
+  apple_touch_icon: /images/logo.jpeg
+  safari_pinned_tab: /images/logo.jpeg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -53,7 +53,7 @@ rss:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2019
 
   # Icon between year and copyright info.
   icon:
@@ -333,11 +333,11 @@ reward_settings:
   # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
   enable: false
   animation: false
-  #comment: Donate comment here.
+  comment: 坚持原创技术分享, 您的支持将鼓励我继续创作!
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  wechatpay: /images/donate-wechat.jpg
+  alipay: /images/donate-alipay.jpg
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
