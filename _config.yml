@@ -80,10 +80,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo:
-    github: git@github.com:grsky360/ilio-tech.git
-  branch: gh-pages
+  type:
   
 
 symbols_count_time:
