@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpeg?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-32x32.jpeg?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo-16x16.jpeg?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.jpeg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Java基础">
+<meta name="keywords" content="面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试复习">
+<meta property="og:url" content="https://ilio.tech/2021/01/08/面试复习/index.html">
+<meta property="og:site_name" content="ILIO">
+<meta property="og:description" content="Java基础">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-01-08T14:56:35.082Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试复习">
+<meta name="twitter:description" content="Java基础">
+  <link rel="canonical" href="https://ilio.tech/2021/01/08/面试复习/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>面试复习 | ILIO</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ILIO</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-tags&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://ilio.tech/2021/01/08/面试复习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ILIO">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">面试复习
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2021-01-08 00:00:00 / 修改时间：22:56:35" itemprop="dateCreated datePublished" datetime="2021-01-08T00:00:00+08:00">2021-01-08</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.6k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><a id="more"></a>
+
+<h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><h4 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h4><ol>
+<li>HashMap<ol>
+<li>默认大小, 扩容</li>
+<li>hash冲突</li>
+<li>链表/红黑树</li>
+<li>多线程操作, 1.7死循环</li>
+</ol>
+</li>
+<li>ConcurrentHashMap<ol>
+<li>并发原理</li>
+<li>1.7和1.8对比</li>
+</ol>
+</li>
+<li>HashTable<ol>
+<li>并发原理</li>
+</ol>
+</li>
+<li>TreeMap<ol>
+<li>底层结构</li>
+</ol>
+</li>
+<li>红黑树<ol>
+<li>基本定义</li>
+<li>插入思想</li>
+<li><a href="https://www.jianshu.com/p/e136ec79235c" target="_blank" rel="noopener">https://www.jianshu.com/p/e136ec79235c</a></li>
+<li>对比AVL</li>
+</ol>
+</li>
+</ol>
+<h4 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h4><ol>
+<li>ArrayList<ol>
+<li>默认大小, 扩容(10, 1.5)</li>
+<li>对比LinkedList, Vector</li>
+<li>获取数据O(1), 扩容O(1)</li>
+</ol>
+</li>
+<li>LinkedList<ol>
+<li>基本结构</li>
+</ol>
+</li>
+<li>Vector<ol>
+<li>并发原理</li>
+</ol>
+</li>
+<li>CopyOnWriteList<ol>
+<li>基本结构</li>
+<li>并发原理</li>
+</ol>
+</li>
+<li>HashSet<ol>
+<li>基本结构</li>
+</ol>
+</li>
+<li>ConcurrentHashSet</li>
+<li>Queue/Deque<ol>
+<li>api</li>
+</ol>
+</li>
+<li>PriorityQueue<ol>
+<li>堆</li>
+</ol>
+</li>
+</ol>
+<h3 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h3><h4 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h4><ol>
+<li>java中线程的状态</li>
+<li>线程池<ol>
+<li>基本参数</li>
+<li>基本原理<ol>
+<li>执行流程</li>
+<li>Worker的创建和释放</li>
+</ol>
+</li>
+<li>Executors提供的几种线程池和队列</li>
+<li>定时任务</li>
+</ol>
+</li>
+</ol>
+<h4 id="锁-JUC"><a href="#锁-JUC" class="headerlink" title="锁, JUC"></a>锁, JUC</h4><ol>
+<li>CAS, ABA<ol>
+<li>UNSAFE</li>
+<li><a href="https://ilio.tech/2019/09/08/Java%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/#more">https://ilio.tech/2019/09/08/Java%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/#more</a></li>
+</ol>
+</li>
+<li>synchronized</li>
+<li>ReentrantLock</li>
+<li>AQS</li>
+<li>volatile</li>
+</ol>
+<h4 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h4><ol>
+<li>类加载过程</li>
+<li>内存模型</li>
+<li>GC<ol>
+<li>回收算法</li>
+<li>分代</li>
+<li>CMS, G1</li>
+<li>ZGC</li>
+</ol>
+</li>
+</ol>
+<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><ol>
+<li>数据类型, 底层结构<ol>
+<li>string</li>
+<li>list</li>
+<li>set</li>
+<li>hash</li>
+<li>zset *<ol>
+<li>跳表和二叉树相比</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>持久化<ol>
+<li>RDB/AOF</li>
+<li>AOF过大怎么优化</li>
+<li>通常RDB和AOF一起使用</li>
+</ol>
+</li>
+<li>分布式锁<ol>
+<li>怎么避免主从不一致, RedLock</li>
+<li>对比Zookeeper</li>
+</ol>
+</li>
+<li>布隆过滤器</li>
+<li>缓存击穿, 穿透, 雪崩</li>
+<li>主从, 哨兵<ol>
+<li>主从同步</li>
+</ol>
+</li>
+</ol>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><ol>
+<li>binlog</li>
+<li>主键id的策略, 不设置的处理方式</li>
+<li>InnoDB, MyIsam<ol>
+<li>区别</li>
+</ol>
+</li>
+<li>聚簇索引, 非聚簇索引, 区别, 原理</li>
+<li>普通索引, 联合索引, 结构</li>
+<li>索引优化, 失效场景</li>
+<li>B树和B+树的区别</li>
+<li>ACID的实现原理<ol>
+<li>原子性, undo log</li>
+<li>一致性</li>
+<li>隔离性, 隔离级别, MVCC</li>
+<li>持久性, redo log</li>
+</ol>
+</li>
+<li>四种隔离级别, 实现原理</li>
+<li>MVCC, readview</li>
+<li>锁类型<ol>
+<li>意向锁 *</li>
+<li>间隙锁 *</li>
+</ol>
+</li>
+<li>缓存一致性</li>
+<li>主从复制</li>
+<li>转账<ol>
+<li>单向, A -&gt; B</li>
+<li>双向, A -&gt; B &amp; B -&gt; A, 怎么避免死锁(不考虑锁机制)</li>
+<li>设计转账系统<ol>
+<li>同步转账</li>
+<li>异步转账</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ol>
+<li>https, 建立连接, 对称加密</li>
+<li>tcp网络协议, 拥塞控制</li>
+<li>进程通信方法</li>
+<li>NIO<ol>
+<li>原理</li>
+<li>epoll, select/poll对比</li>
+<li>epoll数据结构</li>
+</ol>
+</li>
+<li>session, cookie区别</li>
+<li>输入网址到返回结果的全部过程, 数据流转, 缓存, DNS, 后端处理, 转发</li>
+</ol>
+<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><ol>
+<li><a href="http://c.biancheng.net/design_pattern/" target="_blank" rel="noopener">http://c.biancheng.net/design_pattern/</a></li>
+<li><a href="http://www.cocoachina.com/articles/31808" target="_blank" rel="noopener">http://www.cocoachina.com/articles/31808</a></li>
+</ol>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><ol>
+<li>IOC<ol>
+<li>BeanFactory</li>
+<li>ApplicationContext</li>
+<li>Bean的创建, 生命周期</li>
+<li>声明Bean的方式<ol>
+<li>注解, @Component, @Bean</li>
+<li>XML</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>AOP</li>
+<li>动态代理<ol>
+<li>JDK</li>
+<li>CGLIB</li>
+</ol>
+</li>
+<li>SpringBoot<ol>
+<li>基本思想</li>
+<li>starter原理, EnableAutoConfiguration</li>
+</ol>
+</li>
+<li>设计模式<ol>
+<li>单例</li>
+<li>工厂</li>
+<li>代理</li>
+<li>责任链, Filter</li>
+<li>模板, RedisTemplate</li>
+<li>策略, Interceptor</li>
+</ol>
+</li>
+<li>BeanFactory, FactoryBean</li>
+<li>事务<ol>
+<li>管理方式<ol>
+<li>编程式, 使用TransactionTemplate开启关闭和提交事务</li>
+<li>声明式, @Transactional, XML</li>
+</ol>
+</li>
+<li>传播行为</li>
+</ol>
+</li>
+<li>循环依赖</li>
+<li>MyBatis</li>
+</ol>
+<h2 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h2><h3 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h3><ol>
+<li>数据存储, 流程</li>
+<li>高可用</li>
+<li>持久化</li>
+<li>消息队列, 重复消费, 事务消息</li>
+<li>顺序消费<ol>
+<li>借助数据库</li>
+<li>监听器关闭消费者</li>
+</ol>
+</li>
+<li>不同队列的对比</li>
+</ol>
+<h3 id="Thrift"><a href="#Thrift" class="headerlink" title="Thrift"></a>Thrift</h3><h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><ol>
+<li>缓存类型, 从客户端到服务端</li>
+<li>一致性Hash</li>
+<li>熔断, 限流, 降级</li>
+<li>微服务</li>
+<li>分布式调度</li>
+<li>CAP</li>
+<li>分布式事务</li>
+</ol>
+<h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><ol>
+<li>如何找项目性能瓶颈</li>
+<li>项目亮点, 难题, 处理</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>坚持原创技术分享, 您的支持将鼓励我继续创作!</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/donate-wechat.jpg" alt="Hyia 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/donate-alipay.jpg" alt="Hyia 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Hyia</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://ilio.tech/2021/01/08/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/" title="面试复习">https:&#x2F;&#x2F;ilio.tech&#x2F;2021&#x2F;01&#x2F;08&#x2F;面试复习&#x2F;</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-creative-commons&quot;&gt;&lt;&#x2F;i&gt;BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/面试/" rel="tag"><i class="fa fa-tag"></i> 面试</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/10/21/算法库/" rel="next" title="算法库">
+                  <i class="fa fa-chevron-left"></i> 算法库
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java基础"><span class="nav-text">Java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#容器"><span class="nav-text">容器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Collection"><span class="nav-text">Collection</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并发"><span class="nav-text">并发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线程"><span class="nav-text">线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#锁-JUC"><span class="nav-text">锁, JUC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JVM"><span class="nav-text">JVM</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis"><span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-text">网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计模式"><span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中间件"><span class="nav-text">中间件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka"><span class="nav-text">Kafka</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thrift"><span class="nav-text">Thrift</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式"><span class="nav-text">分布式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目"><span class="nav-text">项目</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Hyia">
+  <p class="site-author-name" itemprop="name">Hyia</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://github.com/grsky360" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;grsky360" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="mailto:gsky360@gmail.com" title="Email &amp;rarr; mailto:gsky360@gmail.com" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-envelope&quot;&gt;&lt;&#x2F;i&gt;</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP备19014583号-1 </a>
+  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" rel="noopener" target="_blank"> </a>&copy; 2019 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hyia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">16k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14 分钟</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpeg?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-32x32.jpeg?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo-16x16.jpeg?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.jpeg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="算法">
+<meta name="keywords" content="面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法库">
+<meta property="og:url" content="https://ilio.tech/2020/10/21/算法库/index.html">
+<meta property="og:site_name" content="ILIO">
+<meta property="og:description" content="算法">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-01-08T14:56:35.082Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法库">
+<meta name="twitter:description" content="算法">
+  <link rel="canonical" href="https://ilio.tech/2020/10/21/算法库/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>算法库 | ILIO</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ILIO</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-tags&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://ilio.tech/2020/10/21/算法库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ILIO">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">算法库
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-10-21 00:00:00" itemprop="dateCreated datePublished" datetime="2020-10-21T00:00:00+08:00">2020-10-21</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-08 22:56:35" itemprop="dateModified" datetime="2021-01-08T22:56:35+08:00">2021-01-08</time>
+              </span>
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.4k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><a id="more"></a>
+
+<hr>
+<ul>
+<li><input checked disabled type="checkbox"> 二叉树的层序遍历</li>
+<li><input checked disabled type="checkbox"> LRU缓存机制</li>
+<li><input checked disabled type="checkbox"> 字符串相加</li>
+<li><input checked disabled type="checkbox"> 二叉树的右视图</li>
+<li><input checked disabled type="checkbox"> 路径总和 II</li>
+<li><input checked disabled type="checkbox"> 无重复字符的最长子串</li>
+<li><input checked disabled type="checkbox"> K 个一组翻转链表</li>
+<li><input checked disabled type="checkbox"> 两数相加</li>
+<li><input checked disabled type="checkbox"> 二叉树的完全性检验</li>
+<li><input checked disabled type="checkbox"> 连续子数组的最大和</li>
+<li><input checked disabled type="checkbox"> 前 K 个高频元素</li>
+<li><input checked disabled type="checkbox"> 对称二叉树</li>
+<li><input disabled type="checkbox"> 段式回文</li>
+<li><input checked disabled type="checkbox"> 有效的括号</li>
+<li><input checked disabled type="checkbox"> 移动零</li>
+<li><input checked disabled type="checkbox"> 链表的中间结点</li>
+<li><input checked disabled type="checkbox"> LFU缓存</li>
+<li><input checked disabled type="checkbox"> 反转链表</li>
+<li><input checked disabled type="checkbox"> 相同的树</li>
+<li><input checked disabled type="checkbox"> x 的平方根</li>
+<li><input disabled type="checkbox"> 二叉树中的最大路径和</li>
+<li><input checked disabled type="checkbox"> 旋转数组的最小数字</li>
+<li><input checked disabled type="checkbox"> 相交链表</li>
+<li><input checked disabled type="checkbox"> 三数之和</li>
+<li><input disabled type="checkbox"> 重排链表</li>
+<li><input checked disabled type="checkbox"> 字符串转换整数 (atoi)</li>
+<li><input disabled type="checkbox"> 将数组拆分成斐波那契序列</li>
+<li><input disabled type="checkbox"> 缺失的第一个正数</li>
+<li><input checked disabled type="checkbox"> 二分查找</li>
+<li><input disabled type="checkbox"> 最长连续序列</li>
+<li><input disabled type="checkbox"> 二叉树剪枝</li>
+<li><input checked disabled type="checkbox"> 二叉搜索树的后序遍历序列</li>
+<li><input disabled type="checkbox"> 合并K个排序链表</li>
+<li><input checked disabled type="checkbox"> 两数之和</li>
+<li><input checked disabled type="checkbox"> 两数相加 II</li>
+<li><input checked disabled type="checkbox"> 顺时针打印矩阵</li>
+<li><input checked disabled type="checkbox"> 斐波那契数</li>
+<li><input checked disabled type="checkbox"> 环形链表</li>
+<li><input disabled type="checkbox"> 扑克牌中的顺子</li>
+<li><input checked disabled type="checkbox"> 从前序与中序遍历序列构造二叉树</li>
+<li><input checked disabled type="checkbox"> 数组中的第K个最大元素</li>
+<li><input disabled type="checkbox"> 二叉树的最小深度</li>
+<li><input disabled type="checkbox"> 腐烂的橘子</li>
+<li><input checked disabled type="checkbox"> 二叉搜索树的第k大节点</li>
+<li><input disabled type="checkbox"> 搜索旋转排序数组</li>
+<li><input checked disabled type="checkbox"> 有序数组的平方</li>
+<li><input checked disabled type="checkbox"> 回文链表</li>
+<li><input checked disabled type="checkbox"> 二叉树的最大深度</li>
+<li><input checked disabled type="checkbox"> 二叉树的直径</li>
+<li><input checked disabled type="checkbox"> 合并两个有序链表</li>
+<li><input checked disabled type="checkbox"> 翻转字符串里的单词</li>
+<li><input checked disabled type="checkbox"> 整数反转</li>
+<li><input checked disabled type="checkbox"> 二叉树的所有路径</li>
+<li><input checked disabled type="checkbox"> 二叉树的锯齿形层次遍历</li>
+<li><input disabled type="checkbox"> 二叉树最大宽度</li>
+<li><input disabled type="checkbox"> 二叉树中和为某一值的路径</li>
+<li><input disabled type="checkbox"> III. 从上到下打印二叉树 III</li>
+<li><input disabled type="checkbox"> 最长上升子序列</li>
+<li><input disabled type="checkbox"> 零钱兑换</li>
+<li><input disabled type="checkbox"> 二叉树的完全性检验</li>
+<li><input disabled type="checkbox"> 二叉树的最大深度</li>
+<li><input disabled type="checkbox"> 平衡二叉树</li>
+<li><input disabled type="checkbox"> II. 平衡二叉树</li>
+<li><input disabled type="checkbox"> 二叉树剪枝</li>
+<li><input checked disabled type="checkbox"> 不同路径</li>
+<li><input checked disabled type="checkbox"> 不同路径 II</li>
+<li><input disabled type="checkbox"> 寻找两个正序数组的中位数</li>
+<li><input checked disabled type="checkbox"> 验证回文字符串 Ⅱ</li>
+<li><input disabled type="checkbox"> 旋转字符串</li>
+<li><input checked disabled type="checkbox"> 多数元素</li>
+<li><input checked disabled type="checkbox"> 丑数 III</li>
+<li><input checked disabled type="checkbox"> 数据流中的中位数</li>
+</ul>
+<hr>
+<ul>
+<li><input disabled type="checkbox"> 储水题</li>
+<li><input checked disabled type="checkbox"> 两支不均匀香,测出 15 分钟</li>
+<li><input checked disabled type="checkbox"> LRU</li>
+<li><input checked disabled type="checkbox"> 实现二叉树从上到下的蛇形遍历</li>
+<li><input disabled type="checkbox"> 一个字符串数组，判断数组中的单词是否可以组成字符串</li>
+<li><input disabled type="checkbox"> 现有 5 个抽屉分别装有 1，2，4，1，3 个糖果，小明有三次取糖果的机会，而且每次只能从 相邻的抽屉取，问小明要从哪个抽屉开始取糖果能获取最多糖果?(注:1.题目数据非正式 数据，解题思路:如果用动态规划，如何实现?)</li>
+<li><input disabled type="checkbox"> 某公司有 n 个工区连成一个环形，每个工区一定量的汽油 gas[i]，现有一辆油车装油量不受 限制，油车从 i 工区到 i+1 工区需要消耗汽油量是 consume[i]，gas = [1，3，5，2，3，4]， consume[1，4，2，3，2，3]，问油车从什么工区开始能走完全程?</li>
+<li><input disabled type="checkbox"> 实现 n 个有序链表中取 top k 个元素, 时间复杂度是多少</li>
+<li><input checked disabled type="checkbox"> 求字符串中最大不重复子串</li>
+<li><input checked disabled type="checkbox"> 归并排序</li>
+<li><input disabled type="checkbox"> 隔位置拿抽屉</li>
+<li><input disabled type="checkbox"> 单词搜索</li>
+<li><input checked disabled type="checkbox"> 合并 2 个有序数组</li>
+<li><input disabled type="checkbox"> 合并 n 个有序数组</li>
+<li><input disabled type="checkbox"> 求二叉树的最大路径和</li>
+<li><input disabled type="checkbox"> 求有序数组中比目标值大的下一个 index, eg:数组:{1,3,5,5,5,5,5,6,7,8}，目标值 5;答案为元素 6 的序号:7。</li>
+<li><input disabled type="checkbox"> 递增的数组 array，求距离数组中元素 m 最近(相减最小)的 k 个元素的最大值和最小值 eg array:2,5,8,10,14,17,18,19。m =14，k=4.那么最近的 k 个元素是 10,17,18,19，最小值和最大值为 10,19 </li>
+<li><input disabled type="checkbox"> 多边形的 k 等分点的坐标</li>
+<li><input checked disabled type="checkbox"> 两个数链表求和</li>
+<li><input disabled type="checkbox"> 接雨水</li>
+<li><input disabled type="checkbox"> trie树</li>
+<li><input disabled type="checkbox"> 写代码把中文数字(比如一万零三百二十一)转化成整型数字</li>
+<li><input disabled type="checkbox"> 给无限个范围为 1~m 的数形成一个队列，问最少在前 n 个数的时候，可以通过 加减法计算组合形成 K?(比如说 k=5,给你 2 和 3 可以形成，给你 4 4 3 也可以形成)</li>
+<li><input checked disabled type="checkbox"> 最长不重复子串</li>
+<li><input disabled type="checkbox"> 层次遍历二叉树，每层输出顺序相反</li>
+<li><input disabled type="checkbox"> 二叉树打印出最左列:(二叉树层次遍历的变种)</li>
+<li><input disabled type="checkbox"> 求下列数组的交集 [[1,6], [5,9],[16,30],[8,10]] </li>
+<li><input disabled type="checkbox"> 单链表，基数递增，偶数递减，排序成递增。例子:[1，200，10，180，20，100，100，1]</li>
+<li><input checked disabled type="checkbox"> 股票交易，只能交易一次，求最大收益</li>
+<li><input disabled type="checkbox"> 如何删除链表中的重复节点</li>
+<li><input checked disabled type="checkbox"> 两个数字字符串相乘</li>
+<li><input disabled type="checkbox"> 查找有重复答案的两数之和的索引下标</li>
+</ul>
+<hr>
+
+    </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>坚持原创技术分享, 您的支持将鼓励我继续创作!</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/donate-wechat.jpg" alt="Hyia 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/donate-alipay.jpg" alt="Hyia 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Hyia</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://ilio.tech/2020/10/21/%E7%AE%97%E6%B3%95%E5%BA%93/" title="算法库">https:&#x2F;&#x2F;ilio.tech&#x2F;2020&#x2F;10&#x2F;21&#x2F;算法库&#x2F;</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-creative-commons&quot;&gt;&lt;&#x2F;i&gt;BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/面试/" rel="tag"><i class="fa fa-tag"></i> 面试</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/08/Java 相关知识/" rel="next" title="Java 相关知识">
+                  <i class="fa fa-chevron-left"></i> Java 相关知识
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2021/01/08/面试复习/" rel="prev" title="面试复习">
+                  面试复习 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法"><span class="nav-text">算法</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Hyia">
+  <p class="site-author-name" itemprop="name">Hyia</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://github.com/grsky360" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;grsky360" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="mailto:gsky360@gmail.com" title="Email &amp;rarr; mailto:gsky360@gmail.com" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-envelope&quot;&gt;&lt;&#x2F;i&gt;</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP备19014583号-1 </a>
+  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" rel="noopener" target="_blank"> </a>&copy; 2019 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hyia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">16k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14 分钟</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

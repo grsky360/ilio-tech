@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpeg?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-32x32.jpeg?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo-16x16.jpeg?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.jpeg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="1. Java基础">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 相关知识">
+<meta property="og:url" content="https://ilio.tech/2019/09/08/Java 相关知识/index.html">
+<meta property="og:site_name" content="ILIO">
+<meta property="og:description" content="1. Java基础">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ilio.tech/images/0361a8849041e3b35189679365559e2f.png">
+<meta property="og:image" content="https://ilio.tech/images/4491294-e3bcefb2bacea224.png">
+<meta property="og:image" content="https://ilio.tech/images/aa9ab00d1ff5f54f0f22f8f4d959bf3bcf2.jpg">
+<meta property="og:image" content="https://ilio.tech/images/7896890-895124472bd4317b.png">
+<meta property="og:image" content="https://ilio.tech/images/20180719094756330.jpeg">
+<meta property="og:image" content="https://ilio.tech/images/20180723105652242.jpeg">
+<meta property="og:image" content="https://ilio.tech/images/1184092-20181009213048506-959422609.png">
+<meta property="og:updated_time" content="2021-01-08T14:56:35.082Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 相关知识">
+<meta name="twitter:description" content="1. Java基础">
+<meta name="twitter:image" content="https://ilio.tech/images/0361a8849041e3b35189679365559e2f.png">
+  <link rel="canonical" href="https://ilio.tech/2019/09/08/Java 相关知识/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Java 相关知识 | ILIO</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ILIO</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-tags&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://ilio.tech/2019/09/08/Java 相关知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ILIO">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Java 相关知识
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-08 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-08T00:00:00+08:00">2019-09-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-08 22:56:35" itemprop="dateModified" datetime="2021-01-08T22:56:35+08:00">2021-01-08</time>
+              </span>
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>13k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>12 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-Java基础"><a href="#1-Java基础" class="headerlink" title="1. Java基础"></a>1. Java基础</h2><a id="more"></a>
+<ul>
+<li><p>重载和重写的区别<br><img src="/images/0361a8849041e3b35189679365559e2f.png" alt="0361a8849041e3b35189679365559e2f.png"></p>
+</li>
+<li><p>String 和 StringBuffer、StringBuilder 的区别是什么？String 为什么是不可变的？</p>
+</li>
+<li><p>自动装箱与拆箱</p>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/bbe6bffcb03b" target="_blank" rel="noopener">https://www.jianshu.com/p/bbe6bffcb03b</a></p>
+</blockquote>
+</li>
+<li><p>== 与 equals</p>
+</li>
+<li><p>final 关键字</p>
+<blockquote>
+<ul>
+<li>修饰类/方法: 不可继承</li>
+<li>修饰变量: 不可重新赋值</li>
+</ul>
+</blockquote>
+</li>
+<li><p>Object类的常见方法</p>
+<blockquote>
+<p>equals, hashcode, clone, finalize(被GC的时候自动调用)</p>
+</blockquote>
+</li>
+<li><p>Java 中的异常处理</p>
+<blockquote>
+<p><a href="http://www.bjpowernode.com/tutorial_baseinterviewquestions/199.html" target="_blank" rel="noopener">http://www.bjpowernode.com/tutorial_baseinterviewquestions/199.html</a></p>
+</blockquote>
+</li>
+<li><p>获取用键盘输入常用的的两种方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Method1</span></span><br><span class="line">Scanner input = <span class="keyword">new</span> Scanner(System.in); </span><br><span class="line">String s  = input.nextLine(); </span><br><span class="line"><span class="comment">// Method 2</span></span><br><span class="line">BufferedReader input = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in)); </span><br><span class="line">String s = input.readLine();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接口和抽象类的区别是什么</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/qq_34602647/article/details/80560741" target="_blank" rel="noopener">https://blog.csdn.net/qq_34602647/article/details/80560741</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="2-集合框架"><a href="#2-集合框架" class="headerlink" title="2. 集合框架"></a>2. 集合框架</h2><h3 id="2-1-Map"><a href="#2-1-Map" class="headerlink" title="2.1 Map"></a>2.1 Map</h3><h4 id="2-1-1-HashMap"><a href="#2-1-1-HashMap" class="headerlink" title="2.1.1 HashMap"></a>2.1.1 HashMap</h4><ul>
+<li>key可以为null</li>
+<li><a href="https://blog.csdn.net/visant/article/details/80045154" target="_blank" rel="noopener">https://blog.csdn.net/visant/article/details/80045154</a></li>
+<li><a href="https://www.cnblogs.com/constantingF/p/7446307.html" target="_blank" rel="noopener">https://www.cnblogs.com/constantingF/p/7446307.html</a></li>
+<li><a href="https://www.e-learn.cn/content/qita/952273" target="_blank" rel="noopener">https://www.e-learn.cn/content/qita/952273</a></li>
+</ul>
+<h4 id="2-1-2-HashSet"><a href="#2-1-2-HashSet" class="headerlink" title="2.1.2 HashSet"></a>2.1.2 HashSet</h4><ul>
+<li><a href="https://www.cnblogs.com/skillking/p/7250606.html" target="_blank" rel="noopener">https://www.cnblogs.com/skillking/p/7250606.html</a></li>
+</ul>
+<h4 id="2-1-3-LinkedHashMap"><a href="#2-1-3-LinkedHashMap" class="headerlink" title="2.1.3 LinkedHashMap"></a>2.1.3 LinkedHashMap</h4><ul>
+<li><a href="https://www.jianshu.com/p/8f4f58b4b8ab" target="_blank" rel="noopener">https://www.jianshu.com/p/8f4f58b4b8ab</a></li>
+<li><a href="https://www.iteye.com/blog/uule-1522291" target="_blank" rel="noopener">https://www.iteye.com/blog/uule-1522291</a> (图)</li>
+</ul>
+<h4 id="2-1-4-ConcurrentHashMap"><a href="#2-1-4-ConcurrentHashMap" class="headerlink" title="2.1.4 ConcurrentHashMap"></a>2.1.4 ConcurrentHashMap</h4><ul>
+<li>key不能为null</li>
+<li><a href="https://www.cnblogs.com/lijiasnong/p/9963808.html" target="_blank" rel="noopener">https://www.cnblogs.com/lijiasnong/p/9963808.html</a></li>
+<li><a href="https://www.jianshu.com/p/2b3e4b1d49c1" target="_blank" rel="noopener">https://www.jianshu.com/p/2b3e4b1d49c1</a></li>
+</ul>
+<h4 id="2-1-5-HashTable"><a href="#2-1-5-HashTable" class="headerlink" title="2.1.5 HashTable"></a>2.1.5 HashTable</h4><ul>
+<li>HashTable = synchronized HashMap</li>
+<li><a href="https://www.cnblogs.com/owenma/p/8554568.html" target="_blank" rel="noopener">https://www.cnblogs.com/owenma/p/8554568.html</a></li>
+</ul>
+<h4 id="2-1-6-HashMap-的长度为什么是2的幂次方"><a href="#2-1-6-HashMap-的长度为什么是2的幂次方" class="headerlink" title="2.1.6 HashMap 的长度为什么是2的幂次方"></a>2.1.6 HashMap 的长度为什么是2的幂次方</h4><ul>
+<li><a href="https://www.cnblogs.com/wengshuhang/articles/9867176.html" target="_blank" rel="noopener">https://www.cnblogs.com/wengshuhang/articles/9867176.html</a></li>
+</ul>
+<h4 id="2-1-7-HashMap-多线程操作导致死循环问题-HashMap扩容原理"><a href="#2-1-7-HashMap-多线程操作导致死循环问题-HashMap扩容原理" class="headerlink" title="2.1.7 HashMap 多线程操作导致死循环问题(HashMap扩容原理)"></a>2.1.7 HashMap 多线程操作导致死循环问题(HashMap扩容原理)</h4><ul>
+<li><a href="https://blog.csdn.net/zhuqiuhui/article/details/51849692" target="_blank" rel="noopener">https://blog.csdn.net/zhuqiuhui/article/details/51849692</a></li>
+<li><a href="https://segmentfault.com/a/1190000015812438?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015812438?utm_source=tag-newest</a></li>
+<li><a href="https://www.jianshu.com/p/619a8efcf589" target="_blank" rel="noopener">https://www.jianshu.com/p/619a8efcf589</a></li>
+</ul>
+<h4 id="2-1-8-ConcurrentHashMap-和-HashTable的区别"><a href="#2-1-8-ConcurrentHashMap-和-HashTable的区别" class="headerlink" title="2.1.8 ConcurrentHashMap 和 HashTable的区别"></a>2.1.8 ConcurrentHashMap 和 HashTable的区别</h4><ul>
+<li>HashTable是全局锁, ConcurrentHashMap是Segment锁(分段锁)</li>
+</ul>
+<h3 id="2-2-Collection"><a href="#2-2-Collection" class="headerlink" title="2.2 Collection"></a>2.2 Collection</h3><h4 id="2-2-1-Arraylist-与-LinkedList-异同"><a href="#2-2-1-Arraylist-与-LinkedList-异同" class="headerlink" title="2.2.1 Arraylist 与 LinkedList 异同"></a>2.2.1 Arraylist 与 LinkedList 异同</h4><ul>
+<li><a href="https://www.nowcoder.com/questionTerminal/6be89dcb817240248ee25232679c816d?toCommentId=2493133" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/6be89dcb817240248ee25232679c816d?toCommentId=2493133</a></li>
+</ul>
+<h4 id="2-2-2-ArrayList-与-Vector-区别"><a href="#2-2-2-ArrayList-与-Vector-区别" class="headerlink" title="2.2.2 ArrayList 与 Vector 区别"></a>2.2.2 ArrayList 与 Vector 区别</h4><ul>
+<li><a href="https://www.cnblogs.com/efforts-will-be-lucky/p/7053666.html" target="_blank" rel="noopener">https://www.cnblogs.com/efforts-will-be-lucky/p/7053666.html</a></li>
+</ul>
+<h3 id="2-3-copyOnWrite"><a href="#2-3-copyOnWrite" class="headerlink" title="2.3 copyOnWrite"></a>2.3 copyOnWrite</h3><h3 id="2-4-Collection和Collections区别"><a href="#2-4-Collection和Collections区别" class="headerlink" title="2.4 Collection和Collections区别"></a>2.4 Collection和Collections区别</h3><ul>
+<li>Collection是集合的接口, Collections是集合工具类</li>
+</ul>
+<h2 id="3-多线程与并发"><a href="#3-多线程与并发" class="headerlink" title="3. 多线程与并发"></a>3. 多线程与并发</h2><h3 id="3-1-ThreadLocal原理-对比-volitile"><a href="#3-1-ThreadLocal原理-对比-volitile" class="headerlink" title="3.1 ThreadLocal原理(对比 volitile)"></a>3.1 ThreadLocal原理(对比 volitile)</h3><ul>
+<li><a href="https://www.jianshu.com/p/0ba78fe61c40" target="_blank" rel="noopener">https://www.jianshu.com/p/0ba78fe61c40</a></li>
+<li><a href="https://www.cnblogs.com/hiver/p/7128024.html" target="_blank" rel="noopener">https://www.cnblogs.com/hiver/p/7128024.html</a></li>
+</ul>
+<h3 id="3-2-什么是上下文切换"><a href="#3-2-什么是上下文切换" class="headerlink" title="3.2 什么是上下文切换"></a>3.2 什么是上下文切换</h3><blockquote>
+<p>CPU通过时间片分配算法来循环执行任务, 当前任务执行一个时间片后会切换到下一个任务. 但是, 在切换前会保存上一个任务的状态, 以便下次切换回这个任务时, 可以再次加载这个任务的状态, 从任务保存到再加载的过程就是一次上下文切换.</p>
+</blockquote>
+<h3 id="3-3-用户态和内核态"><a href="#3-3-用户态和内核态" class="headerlink" title="3.3 用户态和内核态"></a>3.3 用户态和内核态</h3><ul>
+<li><a href="https://www.cnblogs.com/zf-blog/p/9309645.html" target="_blank" rel="noopener">https://www.cnblogs.com/zf-blog/p/9309645.html</a></li>
+</ul>
+<h3 id="3-4-CAS-ABA问题"><a href="#3-4-CAS-ABA问题" class="headerlink" title="3.4 CAS, ABA问题"></a>3.4 CAS, ABA问题</h3><ul>
+<li><a href="https://blog.csdn.net/wufaliang003/article/details/78797203" target="_blank" rel="noopener">https://blog.csdn.net/wufaliang003/article/details/78797203</a></li>
+</ul>
+<h3 id="3-5-各种锁"><a href="#3-5-各种锁" class="headerlink" title="3.5 各种锁"></a>3.5 各种锁</h3><ul>
+<li><a href="https://www.jianshu.com/p/12dadbbfaf08" target="_blank" rel="noopener">可以先看完下面的再回来看这个</a></li>
+</ul>
+<h4 id="3-5-1-自旋-互斥-读写"><a href="#3-5-1-自旋-互斥-读写" class="headerlink" title="3.5.1 自旋, 互斥, 读写"></a>3.5.1 自旋, 互斥, 读写</h4><ul>
+<li><a href="https://www.zhihu.com/question/66733477" target="_blank" rel="noopener">https://www.zhihu.com/question/66733477</a></li>
+<li><a href="https://blog.csdn.net/qq_34337272/article/details/81252853" target="_blank" rel="noopener">https://blog.csdn.net/qq_34337272/article/details/81252853</a></li>
+</ul>
+<h4 id="3-5-2-乐观锁-悲观锁"><a href="#3-5-2-乐观锁-悲观锁" class="headerlink" title="3.5.2 乐观锁, 悲观锁"></a>3.5.2 乐观锁, 悲观锁</h4><ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484911&amp;idx=1&amp;sn=1d53616437f50b353e33edad6fda2e4f&source=41" target="_blank" rel="noopener">连接太长</a></li>
+</ul>
+<h4 id="3-5-3-CLH-MCS"><a href="#3-5-3-CLH-MCS" class="headerlink" title="3.5.3 CLH, MCS"></a>3.5.3 CLH, MCS</h4><h5 id="3-5-3-1-CLH"><a href="#3-5-3-1-CLH" class="headerlink" title="3.5.3.1 CLH"></a>3.5.3.1 CLH</h5><ul>
+<li><a href="https://www.jianshu.com/p/1b1b44e84394" target="_blank" rel="noopener">https://www.jianshu.com/p/1b1b44e84394</a></li>
+<li><a href="https://www.jianshu.com/p/5ad8539e25c3" target="_blank" rel="noopener">https://www.jianshu.com/p/5ad8539e25c3</a></li>
+<li><a href="http://cmsblogs.com/?p=2188" target="_blank" rel="noopener">http://cmsblogs.com/?p=2188</a></li>
+<li><a href="https://www.cnblogs.com/yuyutianxia/p/4296220.html" target="_blank" rel="noopener">直接看代码</a></li>
+</ul>
+<h6 id="3-5-3-2-MCS"><a href="#3-5-3-2-MCS" class="headerlink" title="3.5.3.2 MCS"></a>3.5.3.2 MCS</h6><ul>
+<li><a href="https://www.jianshu.com/p/1b1b44e84394" target="_blank" rel="noopener">https://www.jianshu.com/p/1b1b44e84394</a></li>
+<li><a href="https://www.cnblogs.com/yuyutianxia/p/4296220.html" target="_blank" rel="noopener">直接看下面解释</a></li>
+</ul>
+<h4 id="3-5-4-可重入锁-不可重入锁"><a href="#3-5-4-可重入锁-不可重入锁" class="headerlink" title="3.5.4 可重入锁, 不可重入锁"></a>3.5.4 可重入锁, 不可重入锁</h4><ul>
+<li><a href="https://blog.csdn.net/u012545728/article/details/80843595" target="_blank" rel="noopener">https://blog.csdn.net/u012545728/article/details/80843595</a></li>
+</ul>
+<h4 id="3-5-5-synchronized"><a href="#3-5-5-synchronized" class="headerlink" title="3.5.5 synchronized"></a>3.5.5 synchronized</h4><h5 id="3-5-5-1-基本概念和使用"><a href="#3-5-5-1-基本概念和使用" class="headerlink" title="3.5.5.1 基本概念和使用"></a>3.5.5.1 基本概念和使用</h5><ul>
+<li><a href="https://blog.csdn.net/xuqiaobo/article/details/51513871" target="_blank" rel="noopener">https://blog.csdn.net/xuqiaobo/article/details/51513871</a></li>
+<li><a href="https://blog.csdn.net/aiyawalie/article/details/53261823" target="_blank" rel="noopener">https://blog.csdn.net/aiyawalie/article/details/53261823</a></li>
+<li>说说 synchronized 关键字和 volatile 关键字的区别</li>
+</ul>
+<h5 id="3-5-5-2-原理-难点"><a href="#3-5-5-2-原理-难点" class="headerlink" title="3.5.5.2 原理(难点)"></a>3.5.5.2 原理(难点)</h5><ul>
+<li><a href="https://www.jianshu.com/p/36eedeb3f912" target="_blank" rel="noopener">https://www.jianshu.com/p/36eedeb3f912</a></li>
+<li><a href="https://www.jianshu.com/p/9998a9db17f7" target="_blank" rel="noopener">https://www.jianshu.com/p/9998a9db17f7</a></li>
+<li><a href="https://www.jianshu.com/p/31b6a0b1b84b" target="_blank" rel="noopener">https://www.jianshu.com/p/31b6a0b1b84b</a></li>
+<li><img src="/images/4491294-e3bcefb2bacea224.png" alt></li>
+</ul>
+<h5 id="3-5-5-3-synchronized和ReentrantLock"><a href="#3-5-5-3-synchronized和ReentrantLock" class="headerlink" title="3.5.5.3 synchronized和ReentrantLock"></a>3.5.5.3 synchronized和ReentrantLock</h5><ul>
+<li><a href="https://baijiahao.baidu.com/s?id=1638104862611986445&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">https://baijiahao.baidu.com/s?id=1638104862611986445&amp;wfr=spider&amp;for=pc</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1414968" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1414968</a></li>
+</ul>
+<h3 id="3-6-AQS实现原理-java并发包的了解"><a href="#3-6-AQS实现原理-java并发包的了解" class="headerlink" title="3.6 AQS实现原理(java并发包的了解)"></a>3.6 AQS实现原理(java并发包的了解)</h3><h4 id="3-6-1-基本"><a href="#3-6-1-基本" class="headerlink" title="3.6.1 基本"></a>3.6.1 基本</h4><ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484832&idx=1&sn=f902febd050eac59d67fc0804d7e1ad5&chksm=cea24a6bf9d5c37d6b505fe1d43e4fb709729149f1f77344b4a0f5956cab5020a2e102f2adf2&token=1082669959&lang=zh_CN&scene=21#wechat_redirect" target="_blank" rel="noopener">连接太长</a></li>
+<li><a href="https://segmentfault.com/a/1190000017372067" target="_blank" rel="noopener">https://segmentfault.com/a/1190000017372067</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1447796" target="_blank" rel="noopener">直接看AQS</a></li>
+</ul>
+<h4 id="3-6-2-资源共享方式"><a href="#3-6-2-资源共享方式" class="headerlink" title="3.6.2 资源共享方式"></a>3.6.2 资源共享方式</h4><ul>
+<li><a href="https://www.jianshu.com/p/070191e5beef" target="_blank" rel="noopener">https://www.jianshu.com/p/070191e5beef</a></li>
+</ul>
+<h4 id="3-6-3-模板方法模式-设计模式"><a href="#3-6-3-模板方法模式-设计模式" class="headerlink" title="3.6.3 模板方法模式(设计模式)"></a>3.6.3 模板方法模式(设计模式)</h4><h5 id="3-6-3-1-基本"><a href="#3-6-3-1-基本" class="headerlink" title="3.6.3.1 基本"></a>3.6.3.1 基本</h5><ul>
+<li><a href="https://www.cnblogs.com/wangkaihua/p/9123171.html" target="_blank" rel="noopener">https://www.cnblogs.com/wangkaihua/p/9123171.html</a></li>
+</ul>
+<h5 id="3-6-3-2-应用"><a href="#3-6-3-2-应用" class="headerlink" title="3.6.3.2 应用"></a>3.6.3.2 应用</h5><ul>
+<li><a href="https://www.cnblogs.com/chengxiao/archive/2017/07/24/7141160.html" target="_blank" rel="noopener">https://www.cnblogs.com/chengxiao/archive/2017/07/24/7141160.html</a></li>
+</ul>
+<h3 id="3-7-Atomic"><a href="#3-7-Atomic" class="headerlink" title="3.7 Atomic"></a>3.7 Atomic</h3><h4 id="3-7-1-Atomic原子类-使用"><a href="#3-7-1-Atomic原子类-使用" class="headerlink" title="3.7.1 Atomic原子类, 使用"></a>3.7.1 Atomic原子类, 使用</h4><ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484834&amp;idx=1&amp;sn=7d3835091af8125c13fc6db765f4c5bd&source=41#wechat_redirect" target="_blank" rel="noopener">连接太长</a></li>
+<li>四类Atomic: 基本类型, 数组类型, 引用类型, 对象属性修改类型</li>
+</ul>
+<h4 id="3-7-2-原理"><a href="#3-7-2-原理" class="headerlink" title="3.7.2 原理"></a>3.7.2 原理</h4><ul>
+<li><a href="https://blog.csdn.net/huitoukest/article/details/80223453" target="_blank" rel="noopener">https://blog.csdn.net/huitoukest/article/details/80223453</a></li>
+</ul>
+<h3 id="3-8-多线程"><a href="#3-8-多线程" class="headerlink" title="3.8 多线程"></a>3.8 多线程</h3><h4 id="3-8-1-wait方法和sleep方法的区别"><a href="#3-8-1-wait方法和sleep方法的区别" class="headerlink" title="3.8.1 wait方法和sleep方法的区别"></a>3.8.1 wait方法和sleep方法的区别</h4><ul>
+<li><a href="https://blog.csdn.net/qq_42585774/article/details/82935433" target="_blank" rel="noopener">https://blog.csdn.net/qq_42585774/article/details/82935433</a></li>
+</ul>
+<h4 id="3-8-2-Java线程池原理"><a href="#3-8-2-Java线程池原理" class="headerlink" title="3.8.2 Java线程池原理"></a>3.8.2 Java线程池原理</h4><ul>
+<li><a href="https://yq.aliyun.com/articles/687794" target="_blank" rel="noopener">https://yq.aliyun.com/articles/687794</a></li>
+<li><a href="https://blog.51cto.com/14230003/2418026?source=dra" target="_blank" rel="noopener">https://blog.51cto.com/14230003/2418026?source=dra</a></li>
+<li><a href="https://blog.csdn.net/weixin_28760063/article/details/81266152" target="_blank" rel="noopener">https://blog.csdn.net/weixin_28760063/article/details/81266152</a></li>
+<li><a href="https://www.cnblogs.com/a8457013/p/7819044.html" target="_blank" rel="noopener">https://www.cnblogs.com/a8457013/p/7819044.html</a></li>
+</ul>
+<h4 id="3-8-3-设置线程数一般基于哪些考虑"><a href="#3-8-3-设置线程数一般基于哪些考虑" class="headerlink" title="3.8.3 设置线程数一般基于哪些考虑"></a>3.8.3 设置线程数一般基于哪些考虑</h4><ul>
+<li><a href="https://www.jianshu.com/p/1f5195dcc75b" target="_blank" rel="noopener">https://www.jianshu.com/p/1f5195dcc75b</a></li>
+<li><a href="https://www.jianshu.com/p/fbac33d72bd2" target="_blank" rel="noopener">https://www.jianshu.com/p/fbac33d72bd2</a></li>
+<li><a href="https://blog.csdn.net/qrne06/article/details/80587576" target="_blank" rel="noopener">https://blog.csdn.net/qrne06/article/details/80587576</a></li>
+</ul>
+<h4 id="3-8-4-为什么要用线程池"><a href="#3-8-4-为什么要用线程池" class="headerlink" title="3.8.4 为什么要用线程池"></a>3.8.4 为什么要用线程池</h4><ul>
+<li><a href="https://www.cnblogs.com/x-bing/p/5680611.html" target="_blank" rel="noopener">https://www.cnblogs.com/x-bing/p/5680611.html</a></li>
+<li><a href="https://www.jianshu.com/p/174958a72ce9" target="_blank" rel="noopener">https://www.jianshu.com/p/174958a72ce9</a></li>
+</ul>
+<h4 id="3-8-5-如何创建线程池"><a href="#3-8-5-如何创建线程池" class="headerlink" title="3.8.5 如何创建线程池"></a>3.8.5 如何创建线程池</h4><ul>
+<li><a href="https://www.cnblogs.com/gujiande/p/9488462.html" target="_blank" rel="noopener">https://www.cnblogs.com/gujiande/p/9488462.html</a></li>
+<li><a href="https://www.cnblogs.com/fengzheng/p/9297602.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengzheng/p/9297602.html</a></li>
+</ul>
+<h4 id="3-8-6-实现Runnable接口和Callable接口的区别"><a href="#3-8-6-实现Runnable接口和Callable接口的区别" class="headerlink" title="3.8.6 实现Runnable接口和Callable接口的区别"></a>3.8.6 实现Runnable接口和Callable接口的区别</h4><ul>
+<li><a href="https://blog.csdn.net/qq_43045898/article/details/83143106" target="_blank" rel="noopener">https://blog.csdn.net/qq_43045898/article/details/83143106</a></li>
+</ul>
+<h4 id="3-8-7-执行execute-方法和submit-方法的区别是什么呢？"><a href="#3-8-7-执行execute-方法和submit-方法的区别是什么呢？" class="headerlink" title="3.8.7 执行execute()方法和submit()方法的区别是什么呢？"></a>3.8.7 执行execute()方法和submit()方法的区别是什么呢？</h4><ul>
+<li><a href="https://www.jianshu.com/p/bc054f72cdb0" target="_blank" rel="noopener">https://www.jianshu.com/p/bc054f72cdb0</a></li>
+<li><a href="https://blog.csdn.net/meism5/article/details/90264191" target="_blank" rel="noopener">https://blog.csdn.net/meism5/article/details/90264191</a></li>
+</ul>
+<h4 id="3-8-8-Latch-Barrier-Semaphore使用场景"><a href="#3-8-8-Latch-Barrier-Semaphore使用场景" class="headerlink" title="3.8.8 Latch, Barrier, Semaphore使用场景"></a>3.8.8 Latch, Barrier, Semaphore使用场景</h4><h5 id="3-8-8-1-CountDownLatch"><a href="#3-8-8-1-CountDownLatch" class="headerlink" title="3.8.8.1 CountDownLatch"></a>3.8.8.1 CountDownLatch</h5><ul>
+<li><a href="https://blog.csdn.net/u012637358/article/details/90288585" target="_blank" rel="noopener">https://blog.csdn.net/u012637358/article/details/90288585</a></li>
+<li><a href="https://www.cnblogs.com/fengzheng/p/9153720.html" target="_blank" rel="noopener">代码可以略</a></li>
+</ul>
+<h5 id="3-8-8-2-CyclicBarrier"><a href="#3-8-8-2-CyclicBarrier" class="headerlink" title="3.8.8.2 CyclicBarrier"></a>3.8.8.2 CyclicBarrier</h5><ul>
+<li><a href="https://www.jdon.com/idea/java/Java-cyclicbarrier.html" target="_blank" rel="noopener">代码略</a></li>
+</ul>
+<h5 id="3-8-8-3-Semaphore"><a href="#3-8-8-3-Semaphore" class="headerlink" title="3.8.8.3 Semaphore"></a>3.8.8.3 Semaphore</h5><ul>
+<li><a href="https://segmentfault.com/a/1190000019334692" target="_blank" rel="noopener">https://segmentfault.com/a/1190000019334692</a></li>
+</ul>
+<h4 id="3-8-9-Future-FutureTask-CompletionService的使用-JUC的了解"><a href="#3-8-9-Future-FutureTask-CompletionService的使用-JUC的了解" class="headerlink" title="3.8.9 Future, FutureTask, CompletionService的使用(JUC的了解)"></a>3.8.9 Future, FutureTask, CompletionService的使用(JUC的了解)</h4><h5 id="3-8-9-1-Future-FutureTask"><a href="#3-8-9-1-Future-FutureTask" class="headerlink" title="3.8.9.1 Future, FutureTask"></a>3.8.9.1 Future, FutureTask</h5><ul>
+<li><a href="https://cloud.tencent.com/developer/article/1497827" target="_blank" rel="noopener">代码可以略</a></li>
+<li><a href="https://www.cnblogs.com/xiaoxi/p/8303574.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaoxi/p/8303574.html</a></li>
+</ul>
+<h5 id="3-8-9-2-CompletionService"><a href="#3-8-9-2-CompletionService" class="headerlink" title="3.8.9.2 CompletionService"></a>3.8.9.2 CompletionService</h5><ul>
+<li><a href="https://segmentfault.com/a/1190000019604274?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000019604274?utm_source=tag-newest</a></li>
+</ul>
+<h2 id="4-JVM"><a href="#4-JVM" class="headerlink" title="4. JVM"></a>4. JVM</h2><h3 id="4-1-内存结构"><a href="#4-1-内存结构" class="headerlink" title="4.1 内存结构"></a>4.1 内存结构</h3><ul>
+<li><a href="https://juejin.im/post/5c73c6446fb9a04a0d577d14" target="_blank" rel="noopener">https://juejin.im/post/5c73c6446fb9a04a0d577d14</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/38348646" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/38348646</a><blockquote>
+<p>int和Integer有什么区别, 分别存储在哪里</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="4-2-GC"><a href="#4-2-GC" class="headerlink" title="4.2 GC"></a>4.2 GC</h3><ul>
+<li><a href="https://juejin.im/post/5a15be736fb9a044fc4464d6#heading-12" target="_blank" rel="noopener">https://juejin.im/post/5a15be736fb9a044fc4464d6#heading-12</a></li>
+<li><a href="https://www.infoq.cn/article/ZOYqRI4c-BFKmUBmzmKN" target="_blank" rel="noopener">https://www.infoq.cn/article/ZOYqRI4c-BFKmUBmzmKN</a></li>
+<li><a href="https://www.infoq.cn/article/3WyReTKqrHIvtw4frmr3" target="_blank" rel="noopener">https://www.infoq.cn/article/3WyReTKqrHIvtw4frmr3</a></li>
+<li><a href="https://www.jianshu.com/p/108ddab3ad3f" target="_blank" rel="noopener">判断一个Java对象是否存活</a></li>
+<li><a href="https://juejin.im/post/5c9ccaff6fb9a070fe0ded51" target="_blank" rel="noopener">内存泄露(图略)</a></li>
+<li><a href="https://www.jianshu.com/p/d903fd25f30a" target="_blank" rel="noopener">CMS/G1</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/54048685" target="_blank" rel="noopener">G1</a></li>
+</ul>
+<h3 id="4-3-ClassLoader"><a href="#4-3-ClassLoader" class="headerlink" title="4.3 ClassLoader"></a>4.3 ClassLoader</h3><ul>
+<li><a href="https://www.jianshu.com/p/51b2c50c58eb" target="_blank" rel="noopener">代码略</a></li>
+<li><a href="https://www.cnblogs.com/Qian123/p/5707562.html" target="_blank" rel="noopener">代码略</a></li>
+<li><a href="https://www.jianshu.com/p/0ddf610991a5" target="_blank" rel="noopener">class文件结构解析</a></li>
+<li><a href="https://segmentfault.com/a/1190000016011932" target="_blank" rel="noopener">class文件结构解析2</a></li>
+</ul>
+<h3 id="4-4-new-一个对象的过程中发生了什么"><a href="#4-4-new-一个对象的过程中发生了什么" class="headerlink" title="4.4 new 一个对象的过程中发生了什么"></a>4.4 new 一个对象的过程中发生了什么</h3><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/85377745" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/85377745</a></li>
+</ul>
+<h3 id="4-5-调优"><a href="#4-5-调优" class="headerlink" title="4.5 调优"></a>4.5 调优</h3><ul>
+<li>常用的性能优化方式有哪些</li>
+<li>常用的启动参数以及其作用</li>
+</ul>
+<h3 id="4-6-JIT"><a href="#4-6-JIT" class="headerlink" title="4.6 JIT"></a>4.6 JIT</h3><ul>
+<li><a href="https://www.jianshu.com/p/f907fb7c88e9" target="_blank" rel="noopener">https://www.jianshu.com/p/f907fb7c88e9</a></li>
+<li><a href="https://juejin.im/post/5b3782b1e51d4558dc4ae4a7" target="_blank" rel="noopener">https://juejin.im/post/5b3782b1e51d4558dc4ae4a7</a></li>
+</ul>
+<h2 id="5-Spring"><a href="#5-Spring" class="headerlink" title="5. Spring"></a>5. Spring</h2><h3 id="5-1-基本"><a href="#5-1-基本" class="headerlink" title="5.1 基本"></a>5.1 基本</h3><h4 id="5-1-1-Bean作用域"><a href="#5-1-1-Bean作用域" class="headerlink" title="5.1.1 Bean作用域"></a>5.1.1 Bean作用域</h4><ul>
+<li><a href="https://blog.csdn.net/fuzhongmin05/article/details/73389779" target="_blank" rel="noopener">https://blog.csdn.net/fuzhongmin05/article/details/73389779</a></li>
+</ul>
+<h4 id="5-1-2-IOC"><a href="#5-1-2-IOC" class="headerlink" title="5.1.2 IOC"></a>5.1.2 IOC</h4><ul>
+<li><a href="https://www.cnblogs.com/chenssy/p/9576769.html" target="_blank" rel="noopener">只看上面第一节的理论即可</a></li>
+<li><a href="https://www.jianshu.com/p/17b66e6390fd" target="_blank" rel="noopener">https://www.jianshu.com/p/17b66e6390fd</a></li>
+<li><a href="https://www.jianshu.com/p/2808f7c4a24f" target="_blank" rel="noopener">https://www.jianshu.com/p/2808f7c4a24f</a></li>
+<li>BeanFactory是根基, ApplicationContext提供更高级的用法和属性(面向实际使用的开发者)</li>
+<li><a href="https://segmentfault.com/a/1190000018077152?utm_source=tag-newest" target="_blank" rel="noopener">Autowired</a></li>
+</ul>
+<h4 id="5-1-3-AOP"><a href="#5-1-3-AOP" class="headerlink" title="5.1.3 AOP"></a>5.1.3 AOP</h4><h5 id="5-1-3-1-基本"><a href="#5-1-3-1-基本" class="headerlink" title="5.1.3.1 基本"></a>5.1.3.1 基本</h5><ul>
+<li><a href="https://segmentfault.com/a/1190000015018888?utm_source=tag-newest#articleHeader2" target="_blank" rel="noopener">只看1.1, 1.2</a></li>
+</ul>
+<h5 id="5-1-3-2-代理模式"><a href="#5-1-3-2-代理模式" class="headerlink" title="5.1.3.2 代理模式"></a>5.1.3.2 代理模式</h5><ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247484222&idx=1&sn=5191aca33f7b331adaef11c5e07df468&chksm=ebd7423fdca0cb29cdc59b4c79afcda9a44b9206806d2212a1b807c9f5879674934c37c250a1#rd" target="_blank" rel="noopener">连接太长</a></li>
+<li><a href="https://www.jianshu.com/p/9b489bb6abb0" target="_blank" rel="noopener">代码不用看</a></li>
+</ul>
+<h5 id="5-1-3-3-应用场景"><a href="#5-1-3-3-应用场景" class="headerlink" title="5.1.3.3 应用场景"></a>5.1.3.3 应用场景</h5><ul>
+<li><a href="https://www.jianshu.com/p/0799aa19ada1" target="_blank" rel="noopener">看第二节应用场景即可</a></li>
+</ul>
+<h4 id="5-1-4-请求过程"><a href="#5-1-4-请求过程" class="headerlink" title="5.1.4 请求过程"></a>5.1.4 请求过程</h4><h5 id="5-1-4-1-Servlet生命周期"><a href="#5-1-4-1-Servlet生命周期" class="headerlink" title="5.1.4.1 Servlet生命周期"></a>5.1.4.1 Servlet生命周期</h5><ul>
+<li><img src="/images/aa9ab00d1ff5f54f0f22f8f4d959bf3bcf2.jpg" alt></li>
+</ul>
+<h5 id="5-1-4-2-过程"><a href="#5-1-4-2-过程" class="headerlink" title="5.1.4.2 过程"></a>5.1.4.2 过程</h5><ul>
+<li><a href="https://www.cnblogs.com/leskang/p/6101368.html" target="_blank" rel="noopener">https://www.cnblogs.com/leskang/p/6101368.html</a></li>
+</ul>
+<h3 id="5-2-相关应用"><a href="#5-2-相关应用" class="headerlink" title="5.2 相关应用"></a>5.2 相关应用</h3><h4 id="5-2-1-Mybatis"><a href="#5-2-1-Mybatis" class="headerlink" title="5.2.1 Mybatis"></a>5.2.1 Mybatis</h4><ul>
+<li><a href="https://blog.csdn.net/u014745069/article/details/80788127" target="_blank" rel="noopener">Mybatis工作流程</a></li>
+<li><a href="https://blog.csdn.net/a6jishuren/article/details/79656778" target="_blank" rel="noopener">Mybatis框架传递参数方式</a></li>
+</ul>
+<h4 id="5-2-2-事务"><a href="#5-2-2-事务" class="headerlink" title="5.2.2 事务"></a>5.2.2 事务</h4><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/76150369" target="_blank" rel="noopener">我是如何在面试别人Spring事务时“套路”对方的
+</a></li>
+<li>Spring 事务中的隔离级别<ul>
+<li><a href="https://www.liangzl.com/get-article-detail-16242.html" target="_blank" rel="noopener">https://www.liangzl.com/get-article-detail-16242.html</a></li>
+<li><a href="http://www.sohu.com/a/245773215_100012573" target="_blank" rel="noopener">http://www.sohu.com/a/245773215_100012573</a></li>
+</ul>
+</li>
+<li><a href="https://blog.csdn.net/u010963948/article/details/82761383" target="_blank" rel="noopener">Spring 事务中的事务传播行为</a></li>
+</ul>
+<h3 id="5-3-设计模式"><a href="#5-3-设计模式" class="headerlink" title="5.3 设计模式"></a>5.3 设计模式</h3><ul>
+<li>常用的设计模式, 应用的例子(23种设计模式)<ul>
+<li>常用设计模式(前5个最常用): 单例, 工厂, 建造者, 代理, 模板方法(AQS), 适配器, 装饰器, 观察者, 策略, 备忘录</li>
+<li><a href="http://c.biancheng.net/design_pattern/" target="_blank" rel="noopener">http://c.biancheng.net/design_pattern/</a></li>
+<li><a href="http://www.cocoachina.com/articles/31808" target="_blank" rel="noopener">http://www.cocoachina.com/articles/31808</a></li>
+</ul>
+</li>
+<li><a href="http://hukai.me/java-notes-singleton-pattern/" target="_blank" rel="noopener">单例模式的几种写法, 优缺点</a></li>
+<li><a href="https://www.jianshu.com/p/c06a686dae39" target="_blank" rel="noopener">装饰器模式和代理模式的区别 (理解较复杂)</a></li>
+<li>JDK或Spring中用的设计模式举例(对一些开源源码的了解)<blockquote>
+<ul>
+<li>JDK: <a href="https://blog.csdn.net/ZixiangLi/article/details/85237318" target="_blank" rel="noopener">https://blog.csdn.net/ZixiangLi/article/details/85237318</a></li>
+<li>Spring: <a href="https://www.jianshu.com/p/c4f367107182" target="_blank" rel="noopener">https://www.jianshu.com/p/c4f367107182</a> (<code>8/9</code>不用看)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="5-4-Spring生态"><a href="#5-4-Spring生态" class="headerlink" title="5.4 Spring生态"></a>5.4 Spring生态</h3><ul>
+<li><a href="https://blog.csdn.net/wd2014610/article/details/79651494" target="_blank" rel="noopener">https://blog.csdn.net/wd2014610/article/details/79651494</a></li>
+</ul>
+<h2 id="6-树-堆"><a href="#6-树-堆" class="headerlink" title="6. 树, 堆"></a>6. 树, 堆</h2><h3 id="6-1-树"><a href="#6-1-树" class="headerlink" title="6.1 树"></a>6.1 树</h3><ul>
+<li><a href="https://www.jianshu.com/p/6f573afd2501" target="_blank" rel="noopener">https://www.jianshu.com/p/6f573afd2501</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/27700617" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/27700617</a></li>
+<li><a href="https://www.cnblogs.com/maybe2030/p/4732377.html" target="_blank" rel="noopener">代码略</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/79980618" target="_blank" rel="noopener">图解红黑树</a></li>
+</ul>
+<h3 id="6-2-堆"><a href="#6-2-堆" class="headerlink" title="6.2 堆"></a>6.2 堆</h3><ul>
+<li><a href="https://www.jianshu.com/p/6b526aa481b1" target="_blank" rel="noopener">https://www.jianshu.com/p/6b526aa481b1</a></li>
+<li><a href="https://juejin.im/post/59fc75f76fb9a0452206dd15" target="_blank" rel="noopener">https://juejin.im/post/59fc75f76fb9a0452206dd15</a></li>
+</ul>
+<h2 id="7-MySQL"><a href="#7-MySQL" class="headerlink" title="7. MySQL"></a>7. MySQL</h2><h3 id="7-1-ACID原则是什么-隔离级别包含哪些-基础"><a href="#7-1-ACID原则是什么-隔离级别包含哪些-基础" class="headerlink" title="7.1 ACID原则是什么, 隔离级别包含哪些(基础)"></a>7.1 ACID原则是什么, 隔离级别包含哪些(基础)</h3><ul>
+<li><a href="https://blog.csdn.net/tree_ifconfig/article/details/81326892" target="_blank" rel="noopener">https://blog.csdn.net/tree_ifconfig/article/details/81326892</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/1177760294764384/1179611198786848" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/1177760294764384/1179611198786848</a></li>
+<li><a href="http://www.zsythink.net/archives/1233/" target="_blank" rel="noopener">http://www.zsythink.net/archives/1233/</a></li>
+</ul>
+<h3 id="7-2-MyIsam和InnoDB的各种区别-数据库引擎相关"><a href="#7-2-MyIsam和InnoDB的各种区别-数据库引擎相关" class="headerlink" title="7.2 MyIsam和InnoDB的各种区别(数据库引擎相关)"></a>7.2 MyIsam和InnoDB的各种区别(数据库引擎相关)</h3><ul>
+<li><a href="https://www.jb51.net/article/62457.htm" target="_blank" rel="noopener">https://www.jb51.net/article/62457.htm</a></li>
+</ul>
+<h3 id="7-3-索引的底层数据结构-联合索引的生效规则-索引相关"><a href="#7-3-索引的底层数据结构-联合索引的生效规则-索引相关" class="headerlink" title="7.3 索引的底层数据结构, 联合索引的生效规则(索引相关)"></a>7.3 索引的底层数据结构, 联合索引的生效规则(索引相关)</h3><ul>
+<li><a href="https://blog.csdn.net/caijunsen/article/details/83045985" target="_blank" rel="noopener">https://blog.csdn.net/caijunsen/article/details/83045985</a></li>
+</ul>
+<h3 id="7-4-sql查询优化实践经验-explain-profile的使用-sql调优经验"><a href="#7-4-sql查询优化实践经验-explain-profile的使用-sql调优经验" class="headerlink" title="7.4 sql查询优化实践经验, explain, profile的使用(sql调优经验)"></a>7.4 sql查询优化实践经验, explain, profile的使用(sql调优经验)</h3><ul>
+<li><a href="https://www.cnblogs.com/binbinyouni/p/6070715.html" target="_blank" rel="noopener">https://www.cnblogs.com/binbinyouni/p/6070715.html</a></li>
+<li><a href="https://www.cnblogs.com/clphp/p/5403215.html" target="_blank" rel="noopener">https://www.cnblogs.com/clphp/p/5403215.html</a></li>
+<li><a href="https://www.jianshu.com/p/2de16472722e" target="_blank" rel="noopener">https://www.jianshu.com/p/2de16472722e</a></li>
+</ul>
+<h3 id="7-5-分库分表相关的了解"><a href="#7-5-分库分表相关的了解" class="headerlink" title="7.5 分库分表相关的了解"></a>7.5 分库分表相关的了解</h3><ul>
+<li><a href="https://www.jianshu.com/p/f093ff9ace4b" target="_blank" rel="noopener">https://www.jianshu.com/p/f093ff9ace4b</a></li>
+</ul>
+<h3 id="7-6-A、B两表-找出ID字段中-存在A表-但是不存在B表的数据"><a href="#7-6-A、B两表-找出ID字段中-存在A表-但是不存在B表的数据" class="headerlink" title="7.6 A、B两表, 找出ID字段中, 存在A表, 但是不存在B表的数据"></a>7.6 A、B两表, 找出ID字段中, 存在A表, 但是不存在B表的数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> A a <span class="keyword">left</span> <span class="keyword">join</span> B b <span class="keyword">on</span> a.id = b.id <span class="keyword">where</span> b.id <span class="keyword">is</span> <span class="literal">null</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> A a <span class="keyword">where</span> (<span class="keyword">select</span> <span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> <span class="keyword">num</span> <span class="keyword">from</span> B b <span class="keyword">where</span> a.id = b.id) = <span class="number">0</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> A a <span class="keyword">where</span> a.id <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> b.id <span class="keyword">from</span> B)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-7-为什么索引能提高查询速度"><a href="#7-7-为什么索引能提高查询速度" class="headerlink" title="7.7 为什么索引能提高查询速度?"></a>7.7 为什么索引能提高查询速度?</h3><ul>
+<li>查询时会先去索引列表中一次定位到特定值的行数, 减少遍历匹配的行数</li>
+</ul>
+<h3 id="7-8-Mysql如何为表字段添加索引？"><a href="#7-8-Mysql如何为表字段添加索引？" class="headerlink" title="7.8 Mysql如何为表字段添加索引？"></a>7.8 Mysql如何为表字段添加索引？</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="string">`xxx`</span> <span class="keyword">add</span> <span class="keyword">index</span> <span class="string">`idx_name`</span> (<span class="string">`col1`</span>, <span class="string">`col2`</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-9-大表的常见优化手段"><a href="#7-9-大表的常见优化手段" class="headerlink" title="7.9 大表的常见优化手段"></a>7.9 大表的常见优化手段</h3><ul>
+<li><a href="https://www.cnblogs.com/wyy123/p/6027097.html" target="_blank" rel="noopener">https://www.cnblogs.com/wyy123/p/6027097.html</a></li>
+</ul>
+<h2 id="8-网络编程与操作系统"><a href="#8-网络编程与操作系统" class="headerlink" title="8. 网络编程与操作系统"></a>8. 网络编程与操作系统</h2><h3 id="8-1-网络协议"><a href="#8-1-网络协议" class="headerlink" title="8.1 网络协议"></a>8.1 网络协议</h3><h4 id="8-1-1-TCP-UDP"><a href="#8-1-1-TCP-UDP" class="headerlink" title="8.1.1 TCP, UDP"></a>8.1.1 TCP, UDP</h4><ul>
+<li>TCP: 面向连接协议</li>
+<li>UDP: 无连接协议</li>
+<li>链接1: <a href="https://www.cnblogs.com/bokeyuanlongbin/p/9072399.html" target="_blank" rel="noopener">https://www.cnblogs.com/bokeyuanlongbin/p/9072399.html</a> (先看9, 再看10, 然后看其他所有)</li>
+<li>连接2: <a href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484889&idx=1&sn=5f9e6f5c29f9514701c246573d15d9fa&chksm=cea24a12f9d5c3041efd5cf864eb69b76aea6ef9c000a72b16d54794aab97d4fb53515a77147&token=1082669959&lang=zh_CN&scene=21#wechat_redirect" target="_blank" rel="noopener">连接太长</a></li>
+<li><a href="https://blog.csdn.net/qq_41431406/article/details/97926927" target="_blank" rel="noopener">TCP 拥塞控制</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484889&idx=1&sn=5f9e6f5c29f9514701c246573d15d9fa&chksm=cea24a12f9d5c3041efd5cf864eb69b76aea6ef9c000a72b16d54794aab97d4fb53515a77147&token=1082669959&lang=zh_CN&scene=21#wechat_redirect" target="_blank" rel="noopener">连接太长</a></li>
+</ul>
+<h4 id="8-1-2-TCP的三次握手-四次挥手"><a href="#8-1-2-TCP的三次握手-四次挥手" class="headerlink" title="8.1.2 TCP的三次握手, 四次挥手"></a>8.1.2 TCP的三次握手, 四次挥手</h4><ul>
+<li>链接1: 3</li>
+<li><img src="/images/7896890-895124472bd4317b.png" alt></li>
+</ul>
+<h4 id="8-1-3-HTTP-HTTPS"><a href="#8-1-3-HTTP-HTTPS" class="headerlink" title="8.1.3 HTTP, HTTPS"></a>8.1.3 HTTP, HTTPS</h4><h5 id="8-1-3-1-HTTP"><a href="#8-1-3-1-HTTP" class="headerlink" title="8.1.3.1 HTTP"></a>8.1.3.1 HTTP</h5><ul>
+<li><img src="/images/20180719094756330.jpeg" alt></li>
+<li><img src="/images/20180723105652242.jpeg" alt></li>
+</ul>
+<h5 id="8-1-3-2-RSA加密"><a href="#8-1-3-2-RSA加密" class="headerlink" title="8.1.3.2 RSA加密"></a>8.1.3.2 RSA加密</h5><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html</a></li>
+</ul>
+<h5 id="8-1-3-3-HTTPS"><a href="#8-1-3-3-HTTPS" class="headerlink" title="8.1.3.3 HTTPS"></a>8.1.3.3 HTTPS</h5><ul>
+<li><a href="https://www.jianshu.com/p/27862635c077" target="_blank" rel="noopener">https://www.jianshu.com/p/27862635c077</a></li>
+</ul>
+<h4 id="8-1-4-长连接-短连接"><a href="#8-1-4-长连接-短连接" class="headerlink" title="8.1.4 长连接, 短连接"></a>8.1.4 长连接, 短连接</h4><ul>
+<li>此连接指的是TCP连接</li>
+<li>HTTP会话永远都是: 请求响应结束, 长连接指一次TCP连接可以传递多次的HTTP报文信息</li>
+<li>声明长连接: 客户端和服务端在header中都带上 Connection: keep-alive</li>
+<li><a href="https://segmentfault.com/a/1190000015821798" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015821798</a></li>
+</ul>
+<h4 id="8-1-5-在浏览器中输入url地址到显示主页的过程"><a href="#8-1-5-在浏览器中输入url地址到显示主页的过程" class="headerlink" title="8.1.5 在浏览器中输入url地址到显示主页的过程"></a>8.1.5 在浏览器中输入url地址到显示主页的过程</h4><ul>
+<li><img src="/images/1184092-20181009213048506-959422609.png" alt></li>
+<li><a href="https://zhuanlan.zhihu.com/p/82956784" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/82956784</a></li>
+</ul>
+<h4 id="8-1-6-IO-NIO"><a href="#8-1-6-IO-NIO" class="headerlink" title="8.1.6 IO/NIO"></a>8.1.6 IO/NIO</h4><ul>
+<li><a href="https://blog.csdn.net/u013956074/article/details/80974190" target="_blank" rel="noopener">https://blog.csdn.net/u013956074/article/details/80974190</a></li>
+<li><a href="https://www.cnblogs.com/aspirant/p/8630283.html" target="_blank" rel="noopener">https://www.cnblogs.com/aspirant/p/8630283.html</a></li>
+</ul>
+<h4 id="8-1-7-零拷贝"><a href="#8-1-7-零拷贝" class="headerlink" title="8.1.7 零拷贝"></a>8.1.7 零拷贝</h4><ul>
+<li><a href="https://mp.weixin.qq.com/s/oPv1-wrhYjiOC1o0M0tjMA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/oPv1-wrhYjiOC1o0M0tjMA</a></li>
+<li><a href="https://my.oschina.net/u/3990817/blog/3045359" target="_blank" rel="noopener">https://my.oschina.net/u/3990817/blog/3045359</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/88789697" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/88789697</a></li>
+<li>文件传输<ul>
+<li>传输大文件的时候, 使用「异步 I/O + 直接 I/O」</li>
+<li>传输小文件的时候, 则使用「零拷贝技术」</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-2-操作系统"><a href="#8-2-操作系统" class="headerlink" title="8.2 操作系统"></a>8.2 操作系统</h3><h4 id="8-2-1-基本概念"><a href="#8-2-1-基本概念" class="headerlink" title="8.2.1 基本概念"></a>8.2.1 基本概念</h4><ul>
+<li>进程: 对于操作系统来说, 一个任务就是一个进程, 系统资源分配和调度运行的基本单位</li>
+<li>线程: 单个进程中执行中每个任务就是一个线程, 是进程中执行运算的最小单位</li>
+<li>用户态和内核态: <a href="https://www.jianshu.com/p/38ea929e1668" target="_blank" rel="noopener">https://www.jianshu.com/p/38ea929e1668</a></li>
+</ul>
+<h4 id="8-2-2-算法"><a href="#8-2-2-算法" class="headerlink" title="8.2.2 算法"></a>8.2.2 算法</h4><h5 id="8-2-2-1-磁盘调度-电梯调度"><a href="#8-2-2-1-磁盘调度-电梯调度" class="headerlink" title="8.2.2.1 磁盘调度/电梯调度"></a>8.2.2.1 磁盘调度/电梯调度</h5><ul>
+<li><a href="https://blog.csdn.net/qq_27607965/article/details/82355797" target="_blank" rel="noopener">https://blog.csdn.net/qq_27607965/article/details/82355797</a></li>
+<li><a href="https://blog.51cto.com/acevi/2096277" target="_blank" rel="noopener">https://blog.51cto.com/acevi/2096277</a> (代码)</li>
+</ul>
+<h5 id="8-2-2-2-缓存淘汰算法-LRU-LFU-FIFO"><a href="#8-2-2-2-缓存淘汰算法-LRU-LFU-FIFO" class="headerlink" title="8.2.2.2 缓存淘汰算法: LRU, LFU, FIFO"></a>8.2.2.2 缓存淘汰算法: LRU, LFU, FIFO</h5><ul>
+<li><a href="https://www.jianshu.com/p/908e4b671de0" target="_blank" rel="noopener">https://www.jianshu.com/p/908e4b671de0</a></li>
+</ul>
+<h4 id="8-2-3-信号量-互斥锁-不好理解"><a href="#8-2-3-信号量-互斥锁-不好理解" class="headerlink" title="8.2.3 信号量, 互斥锁 (不好理解)"></a>8.2.3 信号量, 互斥锁 (不好理解)</h4><ul>
+<li><a href="https://www.jianshu.com/p/c6ba8bcc22bc" target="_blank" rel="noopener">https://www.jianshu.com/p/c6ba8bcc22bc</a></li>
+<li><a href="https://www.nowcoder.com/questionTerminal/c97a743b7ed04995b9810cb6676b22ce?toCommentId=1540700" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/c97a743b7ed04995b9810cb6676b22ce?toCommentId=1540700</a></li>
+</ul>
+<h4 id="8-2-4-Linux"><a href="#8-2-4-Linux" class="headerlink" title="8.2.4 Linux"></a>8.2.4 Linux</h4><h5 id="8-2-4-1-文件系统"><a href="#8-2-4-1-文件系统" class="headerlink" title="8.2.4.1 文件系统"></a>8.2.4.1 文件系统</h5><ul>
+<li><a href="https://blog.csdn.net/qq_16777851/article/details/82914484" target="_blank" rel="noopener">https://blog.csdn.net/qq_16777851/article/details/82914484</a></li>
+</ul>
+<h5 id="8-2-4-2-常见的-Linux-命令"><a href="#8-2-4-2-常见的-Linux-命令" class="headerlink" title="8.2.4.2 常见的 Linux 命令"></a>8.2.4.2 常见的 Linux 命令</h5><ul>
+<li>cd ls mkdir rm cat tail grep history</li>
+</ul>
+<h4 id="8-2-5-进程间通讯的方式有哪些"><a href="#8-2-5-进程间通讯的方式有哪些" class="headerlink" title="8.2.5 进程间通讯的方式有哪些"></a>8.2.5 进程间通讯的方式有哪些</h4><ul>
+<li><a href="https://www.jianshu.com/p/8e4f9978e5b8" target="_blank" rel="noopener">https://www.jianshu.com/p/8e4f9978e5b8</a></li>
+</ul>
+<h2 id="9-分布式"><a href="#9-分布式" class="headerlink" title="9. 分布式"></a>9. 分布式</h2><h3 id="9-1-Redis"><a href="#9-1-Redis" class="headerlink" title="9.1 Redis"></a>9.1 Redis</h3><h4 id="9-1-1-为什么要用-redis缓存"><a href="#9-1-1-为什么要用-redis缓存" class="headerlink" title="9.1.1 为什么要用 redis缓存"></a>9.1.1 为什么要用 redis缓存</h4><ul>
+<li><a href="https://www.cnblogs.com/bigben0123/p/9115597.html" target="_blank" rel="noopener">https://www.cnblogs.com/bigben0123/p/9115597.html</a></li>
+</ul>
+<h4 id="9-1-2-为什么要用-redis-而不用-map-guava-做缓存"><a href="#9-1-2-为什么要用-redis-而不用-map-guava-做缓存" class="headerlink" title="9.1.2 为什么要用 redis 而不用 map/guava 做缓存?"></a>9.1.2 为什么要用 redis 而不用 map/guava 做缓存?</h4><ul>
+<li><a href="https://www.jianshu.com/p/9d855cddb274?utm_source=oschina-app" target="_blank" rel="noopener">https://www.jianshu.com/p/9d855cddb274?utm_source=oschina-app</a></li>
+</ul>
+<h4 id="9-1-3-redis-和-memcached-的区别"><a href="#9-1-3-redis-和-memcached-的区别" class="headerlink" title="9.1.3 redis 和 memcached 的区别"></a>9.1.3 redis 和 memcached 的区别</h4><ul>
+<li><a href="https://www.cnblogs.com/xingxia/p/redis_compare_memcache.html" target="_blank" rel="noopener">直接看最下面的区别就行了</a></li>
+</ul>
+<h4 id="9-1-4-常见数据结构"><a href="#9-1-4-常见数据结构" class="headerlink" title="9.1.4 常见数据结构"></a>9.1.4 常见数据结构</h4><ul>
+<li>string</li>
+<li>list: 双向链表</li>
+<li>hash: Java中的HashMap</li>
+<li>set: Java中的HashSet</li>
+<li>zset: 带权重的set</li>
+<li><a href="https://linux.cn/article-9879-1.html" target="_blank" rel="noopener">Streams(新)</a></li>
+<li><a href="https://blog.csdn.net/shengqianfeng/article/details/82684354" target="_blank" rel="noopener">https://blog.csdn.net/shengqianfeng/article/details/82684354</a></li>
+<li><a href="https://www.cnblogs.com/alunchen/p/9836170.html" target="_blank" rel="noopener">使用场景</a></li>
+</ul>
+<h4 id="9-1-5-过期时间-内存淘汰机制-内容不多"><a href="#9-1-5-过期时间-内存淘汰机制-内容不多" class="headerlink" title="9.1.5 过期时间, 内存淘汰机制 (内容不多)"></a>9.1.5 过期时间, 内存淘汰机制 (内容不多)</h4><ul>
+<li><a href="https://blog.csdn.net/jiangchunhui2009/article/details/81504073" target="_blank" rel="noopener">直接看5</a></li>
+<li><a href="https://www.cnblogs.com/xiaohaigui/p/10976084.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaohaigui/p/10976084.html</a></li>
+<li><a href="https://www.jianshu.com/p/ad8f35c2c0d0" target="_blank" rel="noopener">https://www.jianshu.com/p/ad8f35c2c0d0</a></li>
+</ul>
+<h4 id="9-1-6-持久化机制"><a href="#9-1-6-持久化机制" class="headerlink" title="9.1.6 持久化机制"></a>9.1.6 持久化机制</h4><blockquote>
+<p>怎么保证 redis 挂掉之后再重启数据可以进行恢复</p>
+<ul>
+<li><a href="https://www.liangzl.com/get-article-detail-126557.html" target="_blank" rel="noopener">https://www.liangzl.com/get-article-detail-126557.html</a></li>
+</ul>
+</blockquote>
+<h4 id="9-1-7-事务"><a href="#9-1-7-事务" class="headerlink" title="9.1.7 事务"></a>9.1.7 事务</h4><ul>
+<li><a href="https://www.cnblogs.com/DeepInThought/p/10720132.html" target="_blank" rel="noopener">https://www.cnblogs.com/DeepInThought/p/10720132.html</a></li>
+</ul>
+<h4 id="9-1-8-缓存雪崩-缓存穿透"><a href="#9-1-8-缓存雪崩-缓存穿透" class="headerlink" title="9.1.8 缓存雪崩, 缓存穿透"></a>9.1.8 缓存雪崩, 缓存穿透</h4><ul>
+<li><a href="https://www.cnblogs.com/raichen/p/7750165.html" target="_blank" rel="noopener">https://www.cnblogs.com/raichen/p/7750165.html</a></li>
+</ul>
+<h4 id="9-1-9-并发竞争-Key-问题"><a href="#9-1-9-并发竞争-Key-问题" class="headerlink" title="9.1.9 并发竞争 Key 问题"></a>9.1.9 并发竞争 Key 问题</h4><ul>
+<li><a href="https://blog.csdn.net/qq_42253147/article/details/94446727" target="_blank" rel="noopener">https://blog.csdn.net/qq_42253147/article/details/94446727</a></li>
+</ul>
+<h4 id="9-1-10-如何保证缓存与数据库双写时的数据一致性"><a href="#9-1-10-如何保证缓存与数据库双写时的数据一致性" class="headerlink" title="9.1.10 如何保证缓存与数据库双写时的数据一致性"></a>9.1.10 如何保证缓存与数据库双写时的数据一致性</h4><ul>
+<li><a href="https://blog.csdn.net/chang384915878/article/details/86756463" target="_blank" rel="noopener">https://blog.csdn.net/chang384915878/article/details/86756463</a></li>
+<li><a href="https://www.jianshu.com/p/a9bbcd3ec1e5" target="_blank" rel="noopener">https://www.jianshu.com/p/a9bbcd3ec1e5</a></li>
+</ul>
+<h4 id="9-1-11-分布式锁"><a href="#9-1-11-分布式锁" class="headerlink" title="9.1.11 分布式锁"></a>9.1.11 分布式锁</h4><ul>
+<li><a href="https://cloud.tencent.com/developer/news/241627" target="_blank" rel="noopener">https://cloud.tencent.com/developer/news/241627</a></li>
+</ul>
+<h3 id="9-2-消息队列"><a href="#9-2-消息队列" class="headerlink" title="9.2 消息队列"></a>9.2 消息队列</h3><h4 id="9-2-1-什么是消息队列？为什么要用消息队列？"><a href="#9-2-1-什么是消息队列？为什么要用消息队列？" class="headerlink" title="9.2.1  什么是消息队列？为什么要用消息队列？"></a>9.2.1  什么是消息队列？为什么要用消息队列？</h4><ul>
+<li><a href="https://blog.csdn.net/fengqiangdu/article/details/96114997" target="_blank" rel="noopener">https://blog.csdn.net/fengqiangdu/article/details/96114997</a></li>
+</ul>
+<h4 id="9-2-1-使用消息队列带来的一些问题"><a href="#9-2-1-使用消息队列带来的一些问题" class="headerlink" title="9.2.1 使用消息队列带来的一些问题"></a>9.2.1 使用消息队列带来的一些问题</h4><ul>
+<li><a href="https://www.jianshu.com/p/f40cd4d6737e" target="_blank" rel="noopener">https://www.jianshu.com/p/f40cd4d6737e</a></li>
+</ul>
+<h4 id="9-2-3-常见消息队列"><a href="#9-2-3-常见消息队列" class="headerlink" title="9.2.3 常见消息队列"></a>9.2.3 常见消息队列</h4><h5 id="9-2-3-1-RabbitMQ"><a href="#9-2-3-1-RabbitMQ" class="headerlink" title="9.2.3.1 RabbitMQ"></a>9.2.3.1 RabbitMQ</h5><ul>
+<li><a href="https://blog.csdn.net/qq_42629110/article/details/84965084" target="_blank" rel="noopener">https://blog.csdn.net/qq_42629110/article/details/84965084</a></li>
+</ul>
+<h5 id="9-2-3-2-常见消息队列对比"><a href="#9-2-3-2-常见消息队列对比" class="headerlink" title="9.2.3.2 常见消息队列对比"></a>9.2.3.2 常见消息队列对比</h5><ul>
+<li><a href="https://blog.csdn.net/myhes/article/details/83247108" target="_blank" rel="noopener">https://blog.csdn.net/myhes/article/details/83247108</a></li>
+<li><a href="https://www.cnblogs.com/xifengxiaoma/p/9391647.html" target="_blank" rel="noopener">https://www.cnblogs.com/xifengxiaoma/p/9391647.html</a></li>
+</ul>
+<h4 id="9-2-4-JMS"><a href="#9-2-4-JMS" class="headerlink" title="9.2.4 JMS"></a>9.2.4 JMS</h4><h5 id="9-2-4-1-基本"><a href="#9-2-4-1-基本" class="headerlink" title="9.2.4.1 基本"></a>9.2.4.1 基本</h5><ul>
+<li>JMS是一个用于提供消息服务的技术规范，它制定了在整个消息服务提供过程中的所有数据结构和交互流程。而MQ则是消息队列服务，是面向消息中间件（MOM）的最终实现，是真正的服务提供者；MQ的实现可以基于JMS，也可以基于其他规范或标准。</li>
+<li><a href="https://www.cnblogs.com/molao-doing/articles/6557305.html" target="_blank" rel="noopener">https://www.cnblogs.com/molao-doing/articles/6557305.html</a></li>
+<li><a href="https://www.cnblogs.com/Zender/p/9098410.html" target="_blank" rel="noopener">看到2.4即可</a></li>
+</ul>
+<h5 id="9-2-4-2-JMS两种消息模型"><a href="#9-2-4-2-JMS两种消息模型" class="headerlink" title="9.2.4.2 JMS两种消息模型"></a>9.2.4.2 JMS两种消息模型</h5><ul>
+<li><a href="https://www.cnblogs.com/mfmdaoyou/p/6740818.html" target="_blank" rel="noopener">https://www.cnblogs.com/mfmdaoyou/p/6740818.html</a></li>
+</ul>
+<h5 id="9-2-4-3-JMS五种消息类型"><a href="#9-2-4-3-JMS五种消息类型" class="headerlink" title="9.2.4.3 JMS五种消息类型"></a>9.2.4.3 JMS五种消息类型</h5><ul>
+<li>TextMessage, 传String</li>
+<li>BytesMessage, 传byte[]</li>
+<li>MapMessage, 传Map</li>
+<li>StreamMessage, 传消息流</li>
+<li>ObjectMessage, 传可序列化对象(Serializable)</li>
+</ul>
+<h3 id="9-3-ZooKeeper"><a href="#9-3-ZooKeeper" class="headerlink" title="9.3 ZooKeeper"></a>9.3 ZooKeeper</h3><ul>
+<li>[只看一即可]<a href="https://blog.csdn.net/l18848956739/article/details/90666648" target="_blank" rel="noopener">https://blog.csdn.net/l18848956739/article/details/90666648</a></li>
+</ul>
+<h3 id="9-4-RPC"><a href="#9-4-RPC" class="headerlink" title="9.4 RPC"></a>9.4 RPC</h3><h4 id="9-4-1-基本"><a href="#9-4-1-基本" class="headerlink" title="9.4.1 基本"></a>9.4.1 基本</h4><ul>
+<li><a href="https://www.jianshu.com/p/2accc2840a1b" target="_blank" rel="noopener">https://www.jianshu.com/p/2accc2840a1b</a></li>
+<li><a href="https://www.cnblogs.com/winner-0715/p/5847638.html" target="_blank" rel="noopener">为什么需要RPC</a></li>
+</ul>
+<h4 id="9-4-2-原理"><a href="#9-4-2-原理" class="headerlink" title="9.4.2 原理"></a>9.4.2 原理</h4><ul>
+<li><a href="https://www.cnblogs.com/swordfall/p/8683905.html" target="_blank" rel="noopener">https://www.cnblogs.com/swordfall/p/8683905.html</a></li>
+</ul>
+<h4 id="9-4-3-Dubbo"><a href="#9-4-3-Dubbo" class="headerlink" title="9.4.3 Dubbo"></a>9.4.3 Dubbo</h4><h5 id="9-4-3-1-什么是Dubbo"><a href="#9-4-3-1-什么是Dubbo" class="headerlink" title="9.4.3.1 什么是Dubbo"></a>9.4.3.1 什么是Dubbo</h5><ul>
+<li>Dubbo是一个分布式服务框架</li>
+</ul>
+<h5 id="9-4-3-2-为什么要使用Dubbo"><a href="#9-4-3-2-为什么要使用Dubbo" class="headerlink" title="9.4.3.2 为什么要使用Dubbo"></a>9.4.3.2 为什么要使用Dubbo</h5><ul>
+<li>Dubbo实现了RPC, 且提供分布式支持</li>
+</ul>
+<h5 id="9-4-3-3-Dubbo-工作原理"><a href="#9-4-3-3-Dubbo-工作原理" class="headerlink" title="9.4.3.3 Dubbo 工作原理"></a>9.4.3.3 Dubbo 工作原理</h5><ul>
+<li>通过Zookeeper找到所有Dubbo节点,然后通过负载均衡选择某一个节点进行操作</li>
+</ul>
+<h5 id="9-4-3-4-负载均衡"><a href="#9-4-3-4-负载均衡" class="headerlink" title="9.4.3.4 负载均衡"></a>9.4.3.4 负载均衡</h5><ul>
+<li><a href="https://www.cnblogs.com/twoheads/p/10131656.html" target="_blank" rel="noopener">https://www.cnblogs.com/twoheads/p/10131656.html</a></li>
+</ul>
+<h5 id="9-4-3-5-ZooKeeper宕机与dubbo直连的情况"><a href="#9-4-3-5-ZooKeeper宕机与dubbo直连的情况" class="headerlink" title="9.4.3.5 ZooKeeper宕机与dubbo直连的情况"></a>9.4.3.5 ZooKeeper宕机与dubbo直连的情况</h5><ul>
+<li>有两种连接方式, 一种是直连, 直接指定dubbo节点的地址, 一种是zookeeper, 使用负载均衡选择dubbo节点</li>
+<li>如果zookeeper挂了, 可以通过本地缓存继续提供服务</li>
+</ul>
+<h3 id="9-5-布隆过滤器"><a href="#9-5-布隆过滤器" class="headerlink" title="9.5 布隆过滤器"></a>9.5 布隆过滤器</h3><ul>
+<li><a href="https://www.jianshu.com/p/2104d11ee0a2" target="_blank" rel="noopener">https://www.jianshu.com/p/2104d11ee0a2</a></li>
+</ul>
+<h3 id="9-6-分布式一致性"><a href="#9-6-分布式一致性" class="headerlink" title="9.6 分布式一致性"></a>9.6 分布式一致性</h3><ul>
+<li><a href="https://www.cnblogs.com/mayundalao/p/11798502.html" target="_blank" rel="noopener">https://www.cnblogs.com/mayundalao/p/11798502.html</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/25933039?from_voters_page=true" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25933039?from_voters_page=true</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/31780743" target="_blank" rel="noopener">Poxos</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/32052223" target="_blank" rel="noopener">Raft</a></li>
+</ul>
+<h2 id="10-算法"><a href="#10-算法" class="headerlink" title="10 算法"></a>10 算法</h2><ul>
+<li><a href="https://github.com/TheAlgorithms/Java" target="_blank" rel="noopener">All Algorithms implemented in Java</a></li>
+<li><a href="https://github.com/TheAlgorithms/Python" target="_blank" rel="noopener">All Algorithms implemented in Python(不用看)</a></li>
+<li><a href="https://leetcode-cn.com/explore/interview/card/top-interview-quesitons-in-2018/" target="_blank" rel="noopener">https://leetcode-cn.com/explore/interview/card/top-interview-quesitons-in-2018/</a></li>
+<li><a href="https://github.com/MisterBooo/LeetCodeAnimation" target="_blank" rel="noopener">https://github.com/MisterBooo/LeetCodeAnimation</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/85197826" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/85197826</a></li>
+</ul>
+<h3 id="10-1-数据结构"><a href="#10-1-数据结构" class="headerlink" title="10.1 数据结构"></a>10.1 数据结构</h3><ul>
+<li><a href="https://blog.csdn.net/Nessie_zhao/article/details/80333570" target="_blank" rel="noopener">常见树1</a></li>
+</ul>
+<h3 id="10-2-基本类型"><a href="#10-2-基本类型" class="headerlink" title="10.2 基本类型"></a>10.2 基本类型</h3><ul>
+<li>递归</li>
+<li>分治<blockquote>
+<p>全排列、二分搜索、归并排序、快速排序、线性时间选择、最接近点对问题</p>
+</blockquote>
+</li>
+<li>动态规划, 备忘录方法<blockquote>
+<p>矩阵连乘问题、最长公共子序列问题、0-1背包问题</p>
+</blockquote>
+</li>
+<li>贪心<blockquote>
+<p>活动安排问题、背包问题、装载问题、哈夫曼编码、单源最短路径、最小生成树问题</p>
+</blockquote>
+</li>
+<li>回溯法<blockquote>
+<p>n后问题、0-1背包问题、旅行售货商问题</p>
+</blockquote>
+</li>
+<li>分支限界法<blockquote>
+<p>0-1背包问题、旅行售货商问题</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="10-3-常见问题"><a href="#10-3-常见问题" class="headerlink" title="10.3 常见问题"></a>10.3 常见问题</h3><ul>
+<li>常见的排序算法, 及其空间时间的复杂度</li>
+<li>查找值范围在[x,y]的乱序的n个数字当中唯一”出现2次”的数字(空间换时间)</li>
+<li>二叉树的深度和广度遍历(最好是非递归)(队列和栈的使用)</li>
+<li>找出二叉树上两个距离最远的节点</li>
+<li>数组的全排列(递归)</li>
+<li>计算一个数字的N次幂</li>
+<li>海量数据的Top N(堆的使用)</li>
+<li>生产者消费者代码</li>
+<li>阻塞队列实现</li>
+<li>线程间通信</li>
+<li>完全二叉树的节点个数(完全二叉树的理解)</li>
+<li>将一个正整数拆成n个数之和, 使得积最大(动态规划)</li>
+<li>求一个字符串的最大无重复子串(动态规划)</li>
+<li>找出一个int数组中, 乘积最大的连续子数组, 数组值包含正负</li>
+<li>找出最长上升子序列(不需要连续), 得出最长值就可以</li>
+<li>现有每只股票的跌涨数据, 请设计算法找出涨幅最高的十只股票(Top N)</li>
+<li>现在中意n支股票, 现投顾手中共有用户的资产为m元, 投顾只想每支股票最多买一支, 且买到的股票总价格正好为m元。请你设计算法, 判断投顾能不能成功(背包问题, 动态规划)</li>
+<li>最大回撤率<blockquote>
+<ul>
+<li>最大回撤: 在某一段时期内产品净值从最高点开始回落到最低点的幅度</li>
+<li>最大回撤率: $max (Di-Dj) / Di$ $(i &lt; j)$</li>
+<li>求最大回撤率, O(n)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="11-系统设计"><a href="#11-系统设计" class="headerlink" title="11. 系统设计"></a>11. 系统设计</h2><h3 id="11-1-业务系统核心架构图"><a href="#11-1-业务系统核心架构图" class="headerlink" title="11.1 业务系统核心架构图"></a>11.1 业务系统核心架构图</h3><ul>
+<li><a href="https://www.jianshu.com/p/9389301b0bc8" target="_blank" rel="noopener">https://www.jianshu.com/p/9389301b0bc8</a></li>
+</ul>
+<h3 id="11-2-如何保证DB和缓存的一致性"><a href="#11-2-如何保证DB和缓存的一致性" class="headerlink" title="11.2 如何保证DB和缓存的一致性"></a>11.2 如何保证DB和缓存的一致性</h3><ul>
+<li><a href="https://www.cnblogs.com/rjzheng/p/9041659.html" target="_blank" rel="noopener">https://www.cnblogs.com/rjzheng/p/9041659.html</a></li>
+<li><a href="https://www.cnblogs.com/itsoku123/p/11718164.html" target="_blank" rel="noopener">https://www.cnblogs.com/itsoku123/p/11718164.html</a></li>
+</ul>
+<h3 id="11-3-缓存使用的关注点"><a href="#11-3-缓存使用的关注点" class="headerlink" title="11.3 缓存使用的关注点"></a>11.3 缓存使用的关注点</h3><ul>
+<li><a href="http://stor.51cto.com/art/201812/589539.htm" target="_blank" rel="noopener">http://stor.51cto.com/art/201812/589539.htm</a></li>
+</ul>
+<h3 id="11-4-设计一个高吞吐量的系统"><a href="#11-4-设计一个高吞吐量的系统" class="headerlink" title="11.4 设计一个高吞吐量的系统"></a>11.4 设计一个高吞吐量的系统</h3><ul>
+<li><a href="https://my.oschina.net/u/2246792/blog/511392" target="_blank" rel="noopener">https://my.oschina.net/u/2246792/blog/511392</a></li>
+</ul>
+<h3 id="11-5-微信发红包设计方案"><a href="#11-5-微信发红包设计方案" class="headerlink" title="11.5 微信发红包设计方案"></a>11.5 微信发红包设计方案</h3><ul>
+<li><a href="https://www.jianshu.com/p/87c98fd7ceef" target="_blank" rel="noopener">https://www.jianshu.com/p/87c98fd7ceef</a></li>
+</ul>
+<h3 id="11-6-限流-降级-高可用-容灾-水平扩容等"><a href="#11-6-限流-降级-高可用-容灾-水平扩容等" class="headerlink" title="11.6 限流, 降级, 高可用, 容灾, 水平扩容等"></a>11.6 限流, 降级, 高可用, 容灾, 水平扩容等</h3><h4 id="11-6-1-限流-降级"><a href="#11-6-1-限流-降级" class="headerlink" title="11.6.1 限流, 降级"></a>11.6.1 限流, 降级</h4><ul>
+<li><a href="https://www.cnblogs.com/binyue/p/11596763.html" target="_blank" rel="noopener">https://www.cnblogs.com/binyue/p/11596763.html</a></li>
+</ul>
+<h4 id="11-6-2-高可用"><a href="#11-6-2-高可用" class="headerlink" title="11.6.2 高可用"></a>11.6.2 高可用</h4><ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959728&idx=1&sn=933227840ec8cdc35d3a33ae3fe97ec5&chksm=bd2d046c8a5a8d7a13551124af36bedf68f7a6e31f6f32828678d2adb108b86b7e08c678f22f&scene=21#wechat_redirect" target="_blank" rel="noopener">链接1</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959830&idx=1&sn=ce1c5a58caed227d7dfdbc16d6e1cea4&chksm=bd2d07ca8a5a8edc45cc45c4787cc72cf4c8b96fb43d2840c7ccd44978036a7d39a03dd578b5&scene=21#wechat_redirect" target="_blank" rel="noopener">链接2</a></li>
+</ul>
+<h4 id="11-6-3-容灾-水平扩容"><a href="#11-6-3-容灾-水平扩容" class="headerlink" title="11.6.3 容灾, 水平扩容"></a>11.6.3 容灾, 水平扩容</h4><ul>
+<li><a href="https://www.jianshu.com/p/6b342357d6ef" target="_blank" rel="noopener">https://www.jianshu.com/p/6b342357d6ef</a></li>
+<li><a href="https://www.jianshu.com/p/be66a52d2b9b" target="_blank" rel="noopener">https://www.jianshu.com/p/be66a52d2b9b</a></li>
+</ul>
+<h3 id="11-7-负载均衡"><a href="#11-7-负载均衡" class="headerlink" title="11.7 负载均衡"></a>11.7 负载均衡</h3><ul>
+<li><a href="https://www.jianshu.com/p/7b2b9d646746" target="_blank" rel="noopener">只看一就行</a></li>
+</ul>
+<h3 id="11-8-一致性哈希的原理"><a href="#11-8-一致性哈希的原理" class="headerlink" title="11.8 一致性哈希的原理"></a>11.8 一致性哈希的原理</h3><ul>
+<li><a href="https://www.cnblogs.com/756623607-zhang/p/6656047.html" target="_blank" rel="noopener">https://www.cnblogs.com/756623607-zhang/p/6656047.html</a></li>
+</ul>
+<h3 id="11-9-分布式事务"><a href="#11-9-分布式事务" class="headerlink" title="11.9 分布式事务"></a>11.9 分布式事务</h3><ul>
+<li>CAP<blockquote>
+<ul>
+<li>C：Consistency，一致性，所有数据变动都是同步的。</li>
+<li>A：Availability，可用性，即在可以接受的时间范围内正确地响应用户请求。</li>
+<li>P：Partition tolerance，分区容错性，即某节点或网络分区故障时，系统仍能够提供满足一致性和可用性的服务。</li>
+</ul>
+</blockquote>
+</li>
+<li><a href="https://www.cnblogs.com/luxiaoxun/p/8832915.html" target="_blank" rel="noopener">看到三.1就行了</a></li>
+</ul>
+<h2 id="12-其他"><a href="#12-其他" class="headerlink" title="12. 其他"></a>12. 其他</h2><ul>
+<li><a href="https://zhuanlan.zhihu.com/c_1046719595074949120" target="_blank" rel="noopener">必须深入理解的50个JAVA基础概念(只有13个))</a></li>
+<li><a href="https://mp.weixin.qq.com/s/dTHL4bUECWden6MdMbJxpg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/dTHL4bUECWden6MdMbJxpg</a></li>
+<li><a href="https://github.com/crossoverJie/JCSprout" target="_blank" rel="noopener">https://github.com/crossoverJie/JCSprout</a></li>
+<li><a href="https://www.zhihu.com/question/31032841/answer/668144642" target="_blank" rel="noopener">https://www.zhihu.com/question/31032841/answer/668144642</a></li>
+<li>看过哪些书, 学过哪些新技术</li>
+<li>技术分享</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>坚持原创技术分享, 您的支持将鼓励我继续创作!</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/donate-wechat.jpg" alt="Hyia 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/donate-alipay.jpg" alt="Hyia 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Hyia</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://ilio.tech/2019/09/08/Java%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" title="Java 相关知识">https:&#x2F;&#x2F;ilio.tech&#x2F;2019&#x2F;09&#x2F;08&#x2F;Java 相关知识&#x2F;</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-creative-commons&quot;&gt;&lt;&#x2F;i&gt;BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/10/21/算法库/" rel="prev" title="算法库">
+                  算法库 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Java基础"><span class="nav-text">1. Java基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-集合框架"><span class="nav-text">2. 集合框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Map"><span class="nav-text">2.1 Map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-HashMap"><span class="nav-text">2.1.1 HashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-HashSet"><span class="nav-text">2.1.2 HashSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-LinkedHashMap"><span class="nav-text">2.1.3 LinkedHashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-ConcurrentHashMap"><span class="nav-text">2.1.4 ConcurrentHashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5-HashTable"><span class="nav-text">2.1.5 HashTable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-6-HashMap-的长度为什么是2的幂次方"><span class="nav-text">2.1.6 HashMap 的长度为什么是2的幂次方</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-7-HashMap-多线程操作导致死循环问题-HashMap扩容原理"><span class="nav-text">2.1.7 HashMap 多线程操作导致死循环问题(HashMap扩容原理)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-8-ConcurrentHashMap-和-HashTable的区别"><span class="nav-text">2.1.8 ConcurrentHashMap 和 HashTable的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Collection"><span class="nav-text">2.2 Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-Arraylist-与-LinkedList-异同"><span class="nav-text">2.2.1 Arraylist 与 LinkedList 异同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-ArrayList-与-Vector-区别"><span class="nav-text">2.2.2 ArrayList 与 Vector 区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-copyOnWrite"><span class="nav-text">2.3 copyOnWrite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-Collection和Collections区别"><span class="nav-text">2.4 Collection和Collections区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-多线程与并发"><span class="nav-text">3. 多线程与并发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-ThreadLocal原理-对比-volitile"><span class="nav-text">3.1 ThreadLocal原理(对比 volitile)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-什么是上下文切换"><span class="nav-text">3.2 什么是上下文切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-用户态和内核态"><span class="nav-text">3.3 用户态和内核态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-CAS-ABA问题"><span class="nav-text">3.4 CAS, ABA问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-各种锁"><span class="nav-text">3.5 各种锁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-1-自旋-互斥-读写"><span class="nav-text">3.5.1 自旋, 互斥, 读写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-2-乐观锁-悲观锁"><span class="nav-text">3.5.2 乐观锁, 悲观锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-3-CLH-MCS"><span class="nav-text">3.5.3 CLH, MCS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-3-1-CLH"><span class="nav-text">3.5.3.1 CLH</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-5-3-2-MCS"><span class="nav-text">3.5.3.2 MCS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-4-可重入锁-不可重入锁"><span class="nav-text">3.5.4 可重入锁, 不可重入锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-5-synchronized"><span class="nav-text">3.5.5 synchronized</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-1-基本概念和使用"><span class="nav-text">3.5.5.1 基本概念和使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-2-原理-难点"><span class="nav-text">3.5.5.2 原理(难点)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-3-synchronized和ReentrantLock"><span class="nav-text">3.5.5.3 synchronized和ReentrantLock</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-AQS实现原理-java并发包的了解"><span class="nav-text">3.6 AQS实现原理(java并发包的了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-1-基本"><span class="nav-text">3.6.1 基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-2-资源共享方式"><span class="nav-text">3.6.2 资源共享方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-3-模板方法模式-设计模式"><span class="nav-text">3.6.3 模板方法模式(设计模式)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3-1-基本"><span class="nav-text">3.6.3.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3-2-应用"><span class="nav-text">3.6.3.2 应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-Atomic"><span class="nav-text">3.7 Atomic</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-1-Atomic原子类-使用"><span class="nav-text">3.7.1 Atomic原子类, 使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-2-原理"><span class="nav-text">3.7.2 原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-多线程"><span class="nav-text">3.8 多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-1-wait方法和sleep方法的区别"><span class="nav-text">3.8.1 wait方法和sleep方法的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-2-Java线程池原理"><span class="nav-text">3.8.2 Java线程池原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-3-设置线程数一般基于哪些考虑"><span class="nav-text">3.8.3 设置线程数一般基于哪些考虑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-4-为什么要用线程池"><span class="nav-text">3.8.4 为什么要用线程池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-5-如何创建线程池"><span class="nav-text">3.8.5 如何创建线程池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-6-实现Runnable接口和Callable接口的区别"><span class="nav-text">3.8.6 实现Runnable接口和Callable接口的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-7-执行execute-方法和submit-方法的区别是什么呢？"><span class="nav-text">3.8.7 执行execute()方法和submit()方法的区别是什么呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-8-Latch-Barrier-Semaphore使用场景"><span class="nav-text">3.8.8 Latch, Barrier, Semaphore使用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-1-CountDownLatch"><span class="nav-text">3.8.8.1 CountDownLatch</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-2-CyclicBarrier"><span class="nav-text">3.8.8.2 CyclicBarrier</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-3-Semaphore"><span class="nav-text">3.8.8.3 Semaphore</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-9-Future-FutureTask-CompletionService的使用-JUC的了解"><span class="nav-text">3.8.9 Future, FutureTask, CompletionService的使用(JUC的了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-9-1-Future-FutureTask"><span class="nav-text">3.8.9.1 Future, FutureTask</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-9-2-CompletionService"><span class="nav-text">3.8.9.2 CompletionService</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-JVM"><span class="nav-text">4. JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-内存结构"><span class="nav-text">4.1 内存结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-GC"><span class="nav-text">4.2 GC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-ClassLoader"><span class="nav-text">4.3 ClassLoader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-new-一个对象的过程中发生了什么"><span class="nav-text">4.4 new 一个对象的过程中发生了什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-调优"><span class="nav-text">4.5 调优</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-JIT"><span class="nav-text">4.6 JIT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Spring"><span class="nav-text">5. Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-基本"><span class="nav-text">5.1 基本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-Bean作用域"><span class="nav-text">5.1.1 Bean作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-IOC"><span class="nav-text">5.1.2 IOC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3-AOP"><span class="nav-text">5.1.3 AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-1-基本"><span class="nav-text">5.1.3.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-2-代理模式"><span class="nav-text">5.1.3.2 代理模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-3-应用场景"><span class="nav-text">5.1.3.3 应用场景</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4-请求过程"><span class="nav-text">5.1.4 请求过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-4-1-Servlet生命周期"><span class="nav-text">5.1.4.1 Servlet生命周期</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-4-2-过程"><span class="nav-text">5.1.4.2 过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-相关应用"><span class="nav-text">5.2 相关应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-Mybatis"><span class="nav-text">5.2.1 Mybatis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2-事务"><span class="nav-text">5.2.2 事务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-设计模式"><span class="nav-text">5.3 设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-Spring生态"><span class="nav-text">5.4 Spring生态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-树-堆"><span class="nav-text">6. 树, 堆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-树"><span class="nav-text">6.1 树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-堆"><span class="nav-text">6.2 堆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-MySQL"><span class="nav-text">7. MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-ACID原则是什么-隔离级别包含哪些-基础"><span class="nav-text">7.1 ACID原则是什么, 隔离级别包含哪些(基础)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-MyIsam和InnoDB的各种区别-数据库引擎相关"><span class="nav-text">7.2 MyIsam和InnoDB的各种区别(数据库引擎相关)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-索引的底层数据结构-联合索引的生效规则-索引相关"><span class="nav-text">7.3 索引的底层数据结构, 联合索引的生效规则(索引相关)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-sql查询优化实践经验-explain-profile的使用-sql调优经验"><span class="nav-text">7.4 sql查询优化实践经验, explain, profile的使用(sql调优经验)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-分库分表相关的了解"><span class="nav-text">7.5 分库分表相关的了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-A、B两表-找出ID字段中-存在A表-但是不存在B表的数据"><span class="nav-text">7.6 A、B两表, 找出ID字段中, 存在A表, 但是不存在B表的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-为什么索引能提高查询速度"><span class="nav-text">7.7 为什么索引能提高查询速度?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-8-Mysql如何为表字段添加索引？"><span class="nav-text">7.8 Mysql如何为表字段添加索引？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-9-大表的常见优化手段"><span class="nav-text">7.9 大表的常见优化手段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-网络编程与操作系统"><span class="nav-text">8. 网络编程与操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-网络协议"><span class="nav-text">8.1 网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-1-TCP-UDP"><span class="nav-text">8.1.1 TCP, UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-2-TCP的三次握手-四次挥手"><span class="nav-text">8.1.2 TCP的三次握手, 四次挥手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-3-HTTP-HTTPS"><span class="nav-text">8.1.3 HTTP, HTTPS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-1-HTTP"><span class="nav-text">8.1.3.1 HTTP</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-2-RSA加密"><span class="nav-text">8.1.3.2 RSA加密</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-3-HTTPS"><span class="nav-text">8.1.3.3 HTTPS</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-4-长连接-短连接"><span class="nav-text">8.1.4 长连接, 短连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-5-在浏览器中输入url地址到显示主页的过程"><span class="nav-text">8.1.5 在浏览器中输入url地址到显示主页的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-6-IO-NIO"><span class="nav-text">8.1.6 IO/NIO</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-7-零拷贝"><span class="nav-text">8.1.7 零拷贝</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-操作系统"><span class="nav-text">8.2 操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-1-基本概念"><span class="nav-text">8.2.1 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-2-算法"><span class="nav-text">8.2.2 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-2-1-磁盘调度-电梯调度"><span class="nav-text">8.2.2.1 磁盘调度/电梯调度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-2-2-缓存淘汰算法-LRU-LFU-FIFO"><span class="nav-text">8.2.2.2 缓存淘汰算法: LRU, LFU, FIFO</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-3-信号量-互斥锁-不好理解"><span class="nav-text">8.2.3 信号量, 互斥锁 (不好理解)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-4-Linux"><span class="nav-text">8.2.4 Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-4-1-文件系统"><span class="nav-text">8.2.4.1 文件系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-4-2-常见的-Linux-命令"><span class="nav-text">8.2.4.2 常见的 Linux 命令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-5-进程间通讯的方式有哪些"><span class="nav-text">8.2.5 进程间通讯的方式有哪些</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-分布式"><span class="nav-text">9. 分布式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-Redis"><span class="nav-text">9.1 Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-为什么要用-redis缓存"><span class="nav-text">9.1.1 为什么要用 redis缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-为什么要用-redis-而不用-map-guava-做缓存"><span class="nav-text">9.1.2 为什么要用 redis 而不用 map/guava 做缓存?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-3-redis-和-memcached-的区别"><span class="nav-text">9.1.3 redis 和 memcached 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-4-常见数据结构"><span class="nav-text">9.1.4 常见数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-5-过期时间-内存淘汰机制-内容不多"><span class="nav-text">9.1.5 过期时间, 内存淘汰机制 (内容不多)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-6-持久化机制"><span class="nav-text">9.1.6 持久化机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-7-事务"><span class="nav-text">9.1.7 事务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-8-缓存雪崩-缓存穿透"><span class="nav-text">9.1.8 缓存雪崩, 缓存穿透</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-9-并发竞争-Key-问题"><span class="nav-text">9.1.9 并发竞争 Key 问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-10-如何保证缓存与数据库双写时的数据一致性"><span class="nav-text">9.1.10 如何保证缓存与数据库双写时的数据一致性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-11-分布式锁"><span class="nav-text">9.1.11 分布式锁</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-消息队列"><span class="nav-text">9.2 消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-什么是消息队列？为什么要用消息队列？"><span class="nav-text">9.2.1  什么是消息队列？为什么要用消息队列？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-使用消息队列带来的一些问题"><span class="nav-text">9.2.1 使用消息队列带来的一些问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-3-常见消息队列"><span class="nav-text">9.2.3 常见消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-3-1-RabbitMQ"><span class="nav-text">9.2.3.1 RabbitMQ</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-3-2-常见消息队列对比"><span class="nav-text">9.2.3.2 常见消息队列对比</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-4-JMS"><span class="nav-text">9.2.4 JMS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-1-基本"><span class="nav-text">9.2.4.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-2-JMS两种消息模型"><span class="nav-text">9.2.4.2 JMS两种消息模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-3-JMS五种消息类型"><span class="nav-text">9.2.4.3 JMS五种消息类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-ZooKeeper"><span class="nav-text">9.3 ZooKeeper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-RPC"><span class="nav-text">9.4 RPC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-1-基本"><span class="nav-text">9.4.1 基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-2-原理"><span class="nav-text">9.4.2 原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-3-Dubbo"><span class="nav-text">9.4.3 Dubbo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-1-什么是Dubbo"><span class="nav-text">9.4.3.1 什么是Dubbo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-2-为什么要使用Dubbo"><span class="nav-text">9.4.3.2 为什么要使用Dubbo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-3-Dubbo-工作原理"><span class="nav-text">9.4.3.3 Dubbo 工作原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-4-负载均衡"><span class="nav-text">9.4.3.4 负载均衡</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-5-ZooKeeper宕机与dubbo直连的情况"><span class="nav-text">9.4.3.5 ZooKeeper宕机与dubbo直连的情况</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-布隆过滤器"><span class="nav-text">9.5 布隆过滤器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-分布式一致性"><span class="nav-text">9.6 分布式一致性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-算法"><span class="nav-text">10 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-数据结构"><span class="nav-text">10.1 数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-基本类型"><span class="nav-text">10.2 基本类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-常见问题"><span class="nav-text">10.3 常见问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-系统设计"><span class="nav-text">11. 系统设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-业务系统核心架构图"><span class="nav-text">11.1 业务系统核心架构图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-如何保证DB和缓存的一致性"><span class="nav-text">11.2 如何保证DB和缓存的一致性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-缓存使用的关注点"><span class="nav-text">11.3 缓存使用的关注点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-4-设计一个高吞吐量的系统"><span class="nav-text">11.4 设计一个高吞吐量的系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-微信发红包设计方案"><span class="nav-text">11.5 微信发红包设计方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-6-限流-降级-高可用-容灾-水平扩容等"><span class="nav-text">11.6 限流, 降级, 高可用, 容灾, 水平扩容等</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-1-限流-降级"><span class="nav-text">11.6.1 限流, 降级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-2-高可用"><span class="nav-text">11.6.2 高可用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-3-容灾-水平扩容"><span class="nav-text">11.6.3 容灾, 水平扩容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-7-负载均衡"><span class="nav-text">11.7 负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-8-一致性哈希的原理"><span class="nav-text">11.8 一致性哈希的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-9-分布式事务"><span class="nav-text">11.9 分布式事务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-其他"><span class="nav-text">12. 其他</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Hyia">
+  <p class="site-author-name" itemprop="name">Hyia</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://github.com/grsky360" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;grsky360" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="mailto:gsky360@gmail.com" title="Email &amp;rarr; mailto:gsky360@gmail.com" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-envelope&quot;&gt;&lt;&#x2F;i&gt;</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP备19014583号-1 </a>
+  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" rel="noopener" target="_blank"> </a>&copy; 2019 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hyia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">16k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14 分钟</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
