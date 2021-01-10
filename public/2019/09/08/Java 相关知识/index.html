@@ -1,68 +1,35 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpeg?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-32x32.jpeg?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo-16x16.jpeg?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.jpeg?v=7.4.0" color="#222">
-
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<meta name="generator" content="Hexo 5.3.0">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpeg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-32x32.jpeg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo-16x16.jpeg">
+  <link rel="mask-icon" href="/images/logo.jpeg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
 
-  <meta name="description" content="1. Java基础">
-<meta name="keywords" content="java">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ilio.tech","root":"/","images":"/images","scheme":"Mist","version":"8.2.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="1. Java基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 相关知识">
-<meta property="og:url" content="https://ilio.tech/2019/09/08/Java 相关知识/index.html">
+<meta property="og:url" content="https://ilio.tech/2019/09/08/Java%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="ILIO">
 <meta property="og:description" content="1. Java基础">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ilio.tech/images/0361a8849041e3b35189679365559e2f.png">
 <meta property="og:image" content="https://ilio.tech/images/4491294-e3bcefb2bacea224.png">
 <meta property="og:image" content="https://ilio.tech/images/aa9ab00d1ff5f54f0f22f8f4d959bf3bcf2.jpg">
@@ -70,245 +37,285 @@
 <meta property="og:image" content="https://ilio.tech/images/20180719094756330.jpeg">
 <meta property="og:image" content="https://ilio.tech/images/20180723105652242.jpeg">
 <meta property="og:image" content="https://ilio.tech/images/1184092-20181009213048506-959422609.png">
-<meta property="og:updated_time" content="2021-01-08T14:56:35.082Z">
+<meta property="article:published_time" content="2019-09-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-08T14:56:35.082Z">
+<meta property="article:author" content="Hyia">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 相关知识">
-<meta name="twitter:description" content="1. Java基础">
 <meta name="twitter:image" content="https://ilio.tech/images/0361a8849041e3b35189679365559e2f.png">
-  <link rel="canonical" href="https://ilio.tech/2019/09/08/Java 相关知识/">
 
 
-<script id="page-configurations">
+<link rel="canonical" href="https://ilio.tech/2019/09/08/Java%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
+
+
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
-
-  <title>Java 相关知识 | ILIO</title>
+<title>Java 相关知识 | ILIO</title>
   
-
-
-
-
 
 
 
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
 
-  .use-motion .logo,
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">ILIO</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ILIO</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
-        <li class="menu-item menu-item-home">
-      
-    
-
-    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;首页</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-tags">
-      
-    
-
-    <a href="/tags/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-tags&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;标签</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&gt;归档</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a></li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
-    
-
 </nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Java%E5%9F%BA%E7%A1%80"><span class="nav-text">1. Java基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6"><span class="nav-text">2. 集合框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Map"><span class="nav-text">2.1 Map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-HashMap"><span class="nav-text">2.1.1 HashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-HashSet"><span class="nav-text">2.1.2 HashSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-LinkedHashMap"><span class="nav-text">2.1.3 LinkedHashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-ConcurrentHashMap"><span class="nav-text">2.1.4 ConcurrentHashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5-HashTable"><span class="nav-text">2.1.5 HashTable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-6-HashMap-%E7%9A%84%E9%95%BF%E5%BA%A6%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF2%E7%9A%84%E5%B9%82%E6%AC%A1%E6%96%B9"><span class="nav-text">2.1.6 HashMap 的长度为什么是2的幂次方</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-7-HashMap-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%93%8D%E4%BD%9C%E5%AF%BC%E8%87%B4%E6%AD%BB%E5%BE%AA%E7%8E%AF%E9%97%AE%E9%A2%98-HashMap%E6%89%A9%E5%AE%B9%E5%8E%9F%E7%90%86"><span class="nav-text">2.1.7 HashMap 多线程操作导致死循环问题(HashMap扩容原理)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-8-ConcurrentHashMap-%E5%92%8C-HashTable%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">2.1.8 ConcurrentHashMap 和 HashTable的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Collection"><span class="nav-text">2.2 Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-Arraylist-%E4%B8%8E-LinkedList-%E5%BC%82%E5%90%8C"><span class="nav-text">2.2.1 Arraylist 与 LinkedList 异同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-ArrayList-%E4%B8%8E-Vector-%E5%8C%BA%E5%88%AB"><span class="nav-text">2.2.2 ArrayList 与 Vector 区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-copyOnWrite"><span class="nav-text">2.3 copyOnWrite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-Collection%E5%92%8CCollections%E5%8C%BA%E5%88%AB"><span class="nav-text">2.4 Collection和Collections区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%B9%B6%E5%8F%91"><span class="nav-text">3. 多线程与并发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-ThreadLocal%E5%8E%9F%E7%90%86-%E5%AF%B9%E6%AF%94-volitile"><span class="nav-text">3.1 ThreadLocal原理(对比 volitile)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2"><span class="nav-text">3.2 什么是上下文切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81"><span class="nav-text">3.3 用户态和内核态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-CAS-ABA%E9%97%AE%E9%A2%98"><span class="nav-text">3.4 CAS, ABA问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E5%90%84%E7%A7%8D%E9%94%81"><span class="nav-text">3.5 各种锁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-1-%E8%87%AA%E6%97%8B-%E4%BA%92%E6%96%A5-%E8%AF%BB%E5%86%99"><span class="nav-text">3.5.1 自旋, 互斥, 读写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-2-%E4%B9%90%E8%A7%82%E9%94%81-%E6%82%B2%E8%A7%82%E9%94%81"><span class="nav-text">3.5.2 乐观锁, 悲观锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-3-CLH-MCS"><span class="nav-text">3.5.3 CLH, MCS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-3-1-CLH"><span class="nav-text">3.5.3.1 CLH</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-5-3-2-MCS"><span class="nav-text">3.5.3.2 MCS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-4-%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81-%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81"><span class="nav-text">3.5.4 可重入锁, 不可重入锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-5-synchronized"><span class="nav-text">3.5.5 synchronized</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-text">3.5.5.1 基本概念和使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-2-%E5%8E%9F%E7%90%86-%E9%9A%BE%E7%82%B9"><span class="nav-text">3.5.5.2 原理(难点)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-3-synchronized%E5%92%8CReentrantLock"><span class="nav-text">3.5.5.3 synchronized和ReentrantLock</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-AQS%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86-java%E5%B9%B6%E5%8F%91%E5%8C%85%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="nav-text">3.6 AQS实现原理(java并发包的了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-1-%E5%9F%BA%E6%9C%AC"><span class="nav-text">3.6.1 基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-2-%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB%E6%96%B9%E5%BC%8F"><span class="nav-text">3.6.2 资源共享方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-3-%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-text">3.6.3 模板方法模式(设计模式)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3-1-%E5%9F%BA%E6%9C%AC"><span class="nav-text">3.6.3.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3-2-%E5%BA%94%E7%94%A8"><span class="nav-text">3.6.3.2 应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-Atomic"><span class="nav-text">3.7 Atomic</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-1-Atomic%E5%8E%9F%E5%AD%90%E7%B1%BB-%E4%BD%BF%E7%94%A8"><span class="nav-text">3.7.1 Atomic原子类, 使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-2-%E5%8E%9F%E7%90%86"><span class="nav-text">3.7.2 原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-text">3.8 多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-1-wait%E6%96%B9%E6%B3%95%E5%92%8Csleep%E6%96%B9%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">3.8.1 wait方法和sleep方法的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-2-Java%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%8E%9F%E7%90%86"><span class="nav-text">3.8.2 Java线程池原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-3-%E8%AE%BE%E7%BD%AE%E7%BA%BF%E7%A8%8B%E6%95%B0%E4%B8%80%E8%88%AC%E5%9F%BA%E4%BA%8E%E5%93%AA%E4%BA%9B%E8%80%83%E8%99%91"><span class="nav-text">3.8.3 设置线程数一般基于哪些考虑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-4-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="nav-text">3.8.4 为什么要用线程池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-5-%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="nav-text">3.8.5 如何创建线程池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-6-%E5%AE%9E%E7%8E%B0Runnable%E6%8E%A5%E5%8F%A3%E5%92%8CCallable%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">3.8.6 实现Runnable接口和Callable接口的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-7-%E6%89%A7%E8%A1%8Cexecute-%E6%96%B9%E6%B3%95%E5%92%8Csubmit-%E6%96%B9%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%E5%91%A2%EF%BC%9F"><span class="nav-text">3.8.7 执行execute()方法和submit()方法的区别是什么呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-8-Latch-Barrier-Semaphore%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">3.8.8 Latch, Barrier, Semaphore使用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-1-CountDownLatch"><span class="nav-text">3.8.8.1 CountDownLatch</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-2-CyclicBarrier"><span class="nav-text">3.8.8.2 CyclicBarrier</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-3-Semaphore"><span class="nav-text">3.8.8.3 Semaphore</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-9-Future-FutureTask-CompletionService%E7%9A%84%E4%BD%BF%E7%94%A8-JUC%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="nav-text">3.8.9 Future, FutureTask, CompletionService的使用(JUC的了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-9-1-Future-FutureTask"><span class="nav-text">3.8.9.1 Future, FutureTask</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-9-2-CompletionService"><span class="nav-text">3.8.9.2 CompletionService</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-JVM"><span class="nav-text">4. JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84"><span class="nav-text">4.1 内存结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-GC"><span class="nav-text">4.2 GC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-ClassLoader"><span class="nav-text">4.3 ClassLoader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-new-%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-text">4.4 new 一个对象的过程中发生了什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E8%B0%83%E4%BC%98"><span class="nav-text">4.5 调优</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-JIT"><span class="nav-text">4.6 JIT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Spring"><span class="nav-text">5. Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E5%9F%BA%E6%9C%AC"><span class="nav-text">5.1 基本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-Bean%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-text">5.1.1 Bean作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-IOC"><span class="nav-text">5.1.2 IOC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3-AOP"><span class="nav-text">5.1.3 AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-1-%E5%9F%BA%E6%9C%AC"><span class="nav-text">5.1.3.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-2-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="nav-text">5.1.3.2 代理模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-3-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">5.1.3.3 应用场景</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4-%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B"><span class="nav-text">5.1.4 请求过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-4-1-Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">5.1.4.1 Servlet生命周期</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-4-2-%E8%BF%87%E7%A8%8B"><span class="nav-text">5.1.4.2 过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8"><span class="nav-text">5.2 相关应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-Mybatis"><span class="nav-text">5.2.1 Mybatis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2-%E4%BA%8B%E5%8A%A1"><span class="nav-text">5.2.2 事务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-text">5.3 设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-Spring%E7%94%9F%E6%80%81"><span class="nav-text">5.4 Spring生态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%A0%91-%E5%A0%86"><span class="nav-text">6. 树, 堆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E6%A0%91"><span class="nav-text">6.1 树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%E5%A0%86"><span class="nav-text">6.2 堆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-MySQL"><span class="nav-text">7. MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-ACID%E5%8E%9F%E5%88%99%E6%98%AF%E4%BB%80%E4%B9%88-%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E5%8C%85%E5%90%AB%E5%93%AA%E4%BA%9B-%E5%9F%BA%E7%A1%80"><span class="nav-text">7.1 ACID原则是什么, 隔离级别包含哪些(基础)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-MyIsam%E5%92%8CInnoDB%E7%9A%84%E5%90%84%E7%A7%8D%E5%8C%BA%E5%88%AB-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%95%E6%93%8E%E7%9B%B8%E5%85%B3"><span class="nav-text">7.2 MyIsam和InnoDB的各种区别(数据库引擎相关)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-%E7%B4%A2%E5%BC%95%E7%9A%84%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E7%9A%84%E7%94%9F%E6%95%88%E8%A7%84%E5%88%99-%E7%B4%A2%E5%BC%95%E7%9B%B8%E5%85%B3"><span class="nav-text">7.3 索引的底层数据结构, 联合索引的生效规则(索引相关)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-sql%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C-explain-profile%E7%9A%84%E4%BD%BF%E7%94%A8-sql%E8%B0%83%E4%BC%98%E7%BB%8F%E9%AA%8C"><span class="nav-text">7.4 sql查询优化实践经验, explain, profile的使用(sql调优经验)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="nav-text">7.5 分库分表相关的了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-A%E3%80%81B%E4%B8%A4%E8%A1%A8-%E6%89%BE%E5%87%BAID%E5%AD%97%E6%AE%B5%E4%B8%AD-%E5%AD%98%E5%9C%A8A%E8%A1%A8-%E4%BD%86%E6%98%AF%E4%B8%8D%E5%AD%98%E5%9C%A8B%E8%A1%A8%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-text">7.6 A、B两表, 找出ID字段中, 存在A表, 但是不存在B表的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-%E4%B8%BA%E4%BB%80%E4%B9%88%E7%B4%A2%E5%BC%95%E8%83%BD%E6%8F%90%E9%AB%98%E6%9F%A5%E8%AF%A2%E9%80%9F%E5%BA%A6"><span class="nav-text">7.7 为什么索引能提高查询速度?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-8-Mysql%E5%A6%82%E4%BD%95%E4%B8%BA%E8%A1%A8%E5%AD%97%E6%AE%B5%E6%B7%BB%E5%8A%A0%E7%B4%A2%E5%BC%95%EF%BC%9F"><span class="nav-text">7.8 Mysql如何为表字段添加索引？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-9-%E5%A4%A7%E8%A1%A8%E7%9A%84%E5%B8%B8%E8%A7%81%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5"><span class="nav-text">7.9 大表的常见优化手段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B8%8E%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-text">8. 网络编程与操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text">8.1 网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-1-TCP-UDP"><span class="nav-text">8.1.1 TCP, UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-2-TCP%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B-%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-text">8.1.2 TCP的三次握手, 四次挥手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-3-HTTP-HTTPS"><span class="nav-text">8.1.3 HTTP, HTTPS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-1-HTTP"><span class="nav-text">8.1.3.1 HTTP</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-2-RSA%E5%8A%A0%E5%AF%86"><span class="nav-text">8.1.3.2 RSA加密</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-3-HTTPS"><span class="nav-text">8.1.3.3 HTTPS</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-4-%E9%95%BF%E8%BF%9E%E6%8E%A5-%E7%9F%AD%E8%BF%9E%E6%8E%A5"><span class="nav-text">8.1.4 长连接, 短连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-5-%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BE%93%E5%85%A5url%E5%9C%B0%E5%9D%80%E5%88%B0%E6%98%BE%E7%A4%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-text">8.1.5 在浏览器中输入url地址到显示主页的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-6-IO-NIO"><span class="nav-text">8.1.6 IO&#x2F;NIO</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-7-%E9%9B%B6%E6%8B%B7%E8%B4%9D"><span class="nav-text">8.1.7 零拷贝</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-text">8.2 操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">8.2.1 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-2-%E7%AE%97%E6%B3%95"><span class="nav-text">8.2.2 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-2-1-%E7%A3%81%E7%9B%98%E8%B0%83%E5%BA%A6-%E7%94%B5%E6%A2%AF%E8%B0%83%E5%BA%A6"><span class="nav-text">8.2.2.1 磁盘调度&#x2F;电梯调度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-2-2-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95-LRU-LFU-FIFO"><span class="nav-text">8.2.2.2 缓存淘汰算法: LRU, LFU, FIFO</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-3-%E4%BF%A1%E5%8F%B7%E9%87%8F-%E4%BA%92%E6%96%A5%E9%94%81-%E4%B8%8D%E5%A5%BD%E7%90%86%E8%A7%A3"><span class="nav-text">8.2.3 信号量, 互斥锁 (不好理解)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-4-Linux"><span class="nav-text">8.2.4 Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-4-1-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-text">8.2.4.1 文件系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-4-2-%E5%B8%B8%E8%A7%81%E7%9A%84-Linux-%E5%91%BD%E4%BB%A4"><span class="nav-text">8.2.4.2 常见的 Linux 命令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-5-%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E8%AE%AF%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text">8.2.5 进程间通讯的方式有哪些</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%88%86%E5%B8%83%E5%BC%8F"><span class="nav-text">9. 分布式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-Redis"><span class="nav-text">9.1 Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-redis%E7%BC%93%E5%AD%98"><span class="nav-text">9.1.1 为什么要用 redis缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-redis-%E8%80%8C%E4%B8%8D%E7%94%A8-map-guava-%E5%81%9A%E7%BC%93%E5%AD%98"><span class="nav-text">9.1.2 为什么要用 redis 而不用 map&#x2F;guava 做缓存?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-3-redis-%E5%92%8C-memcached-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">9.1.3 redis 和 memcached 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-4-%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-text">9.1.4 常见数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-5-%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4-%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E6%9C%BA%E5%88%B6-%E5%86%85%E5%AE%B9%E4%B8%8D%E5%A4%9A"><span class="nav-text">9.1.5 过期时间, 内存淘汰机制 (内容不多)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-6-%E6%8C%81%E4%B9%85%E5%8C%96%E6%9C%BA%E5%88%B6"><span class="nav-text">9.1.6 持久化机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-7-%E4%BA%8B%E5%8A%A1"><span class="nav-text">9.1.7 事务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-8-%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F"><span class="nav-text">9.1.8 缓存雪崩, 缓存穿透</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-9-%E5%B9%B6%E5%8F%91%E7%AB%9E%E4%BA%89-Key-%E9%97%AE%E9%A2%98"><span class="nav-text">9.1.9 并发竞争 Key 问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-10-%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E7%BC%93%E5%AD%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8C%E5%86%99%E6%97%B6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%E6%80%A7"><span class="nav-text">9.1.10 如何保证缓存与数据库双写时的数据一致性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-11-%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="nav-text">9.1.11 分布式锁</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="nav-text">9.2 消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%EF%BC%9F"><span class="nav-text">9.2.1  什么是消息队列？为什么要用消息队列？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-%E4%BD%BF%E7%94%A8%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%B8%A6%E6%9D%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-text">9.2.1 使用消息队列带来的一些问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-3-%E5%B8%B8%E8%A7%81%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="nav-text">9.2.3 常见消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-3-1-RabbitMQ"><span class="nav-text">9.2.3.1 RabbitMQ</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-3-2-%E5%B8%B8%E8%A7%81%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%AF%B9%E6%AF%94"><span class="nav-text">9.2.3.2 常见消息队列对比</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-4-JMS"><span class="nav-text">9.2.4 JMS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-1-%E5%9F%BA%E6%9C%AC"><span class="nav-text">9.2.4.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-2-JMS%E4%B8%A4%E7%A7%8D%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9E%8B"><span class="nav-text">9.2.4.2 JMS两种消息模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-3-JMS%E4%BA%94%E7%A7%8D%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B"><span class="nav-text">9.2.4.3 JMS五种消息类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-ZooKeeper"><span class="nav-text">9.3 ZooKeeper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-RPC"><span class="nav-text">9.4 RPC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-1-%E5%9F%BA%E6%9C%AC"><span class="nav-text">9.4.1 基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-2-%E5%8E%9F%E7%90%86"><span class="nav-text">9.4.2 原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-3-Dubbo"><span class="nav-text">9.4.3 Dubbo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-1-%E4%BB%80%E4%B9%88%E6%98%AFDubbo"><span class="nav-text">9.4.3.1 什么是Dubbo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Dubbo"><span class="nav-text">9.4.3.2 为什么要使用Dubbo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-3-Dubbo-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-text">9.4.3.3 Dubbo 工作原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-4-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="nav-text">9.4.3.4 负载均衡</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-5-ZooKeeper%E5%AE%95%E6%9C%BA%E4%B8%8Edubbo%E7%9B%B4%E8%BF%9E%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">9.4.3.5 ZooKeeper宕机与dubbo直连的情况</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-text">9.5 布隆过滤器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7"><span class="nav-text">9.6 分布式一致性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E7%AE%97%E6%B3%95"><span class="nav-text">10 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-text">10.1 数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="nav-text">10.2 基本类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">10.3 常见问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="nav-text">11. 系统设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-%E4%B8%9A%E5%8A%A1%E7%B3%BB%E7%BB%9F%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="nav-text">11.1 业务系统核心架构图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81DB%E5%92%8C%E7%BC%93%E5%AD%98%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7"><span class="nav-text">11.2 如何保证DB和缓存的一致性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-%E7%BC%93%E5%AD%98%E4%BD%BF%E7%94%A8%E7%9A%84%E5%85%B3%E6%B3%A8%E7%82%B9"><span class="nav-text">11.3 缓存使用的关注点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-4-%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E9%AB%98%E5%90%9E%E5%90%90%E9%87%8F%E7%9A%84%E7%B3%BB%E7%BB%9F"><span class="nav-text">11.4 设计一个高吞吐量的系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-%E5%BE%AE%E4%BF%A1%E5%8F%91%E7%BA%A2%E5%8C%85%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88"><span class="nav-text">11.5 微信发红包设计方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-6-%E9%99%90%E6%B5%81-%E9%99%8D%E7%BA%A7-%E9%AB%98%E5%8F%AF%E7%94%A8-%E5%AE%B9%E7%81%BE-%E6%B0%B4%E5%B9%B3%E6%89%A9%E5%AE%B9%E7%AD%89"><span class="nav-text">11.6 限流, 降级, 高可用, 容灾, 水平扩容等</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-1-%E9%99%90%E6%B5%81-%E9%99%8D%E7%BA%A7"><span class="nav-text">11.6.1 限流, 降级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-2-%E9%AB%98%E5%8F%AF%E7%94%A8"><span class="nav-text">11.6.2 高可用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-3-%E5%AE%B9%E7%81%BE-%E6%B0%B4%E5%B9%B3%E6%89%A9%E5%AE%B9"><span class="nav-text">11.6.3 容灾, 水平扩容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-7-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="nav-text">11.7 负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-8-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-text">11.8 一致性哈希的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-9-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1"><span class="nav-text">11.9 分布式事务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E5%85%B6%E4%BB%96"><span class="nav-text">12. 其他</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hyia"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Hyia</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/grsky360" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;grsky360" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:gsky360@gmail.com" title="Email → mailto:gsky360@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
 
-  <div id="posts" class="posts-expand">
-      <article itemscope itemtype="http://schema.org/Article">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
-  
-  <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://ilio.tech/2019/09/08/Java 相关知识/">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ilio.tech/2019/09/08/Java%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Hyia">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="ILIO">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Java 相关知识
-
-          
+        <h1 class="post-title" itemprop="name headline">
+          Java 相关知识
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2019-09-08 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-08T00:00:00+08:00">2019-09-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-01-08 22:56:35" itemprop="dateModified" datetime="2021-01-08T22:56:35+08:00">2021-01-08</time>
+      </span>
 
-              <time title="创建时间：2019-09-08 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-08T00:00:00+08:00">2019-09-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-08 22:56:35" itemprop="dateModified" datetime="2021-01-08T22:56:35+08:00">2021-01-08</time>
-              </span>
-            
-          
-
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>13k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>12 分钟</span>
-            </span>
-          
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>13k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>12 分钟</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -317,8 +324,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <h2 id="1-Java基础"><a href="#1-Java基础" class="headerlink" title="1. Java基础"></a>1. Java基础</h2><a id="more"></a>
 <ul>
 <li><p>重载和重写的区别<br><img src="/images/0361a8849041e3b35189679365559e2f.png" alt="0361a8849041e3b35189679365559e2f.png"></p>
@@ -949,279 +954,132 @@
     
     
     
-        
-      
-        <div id="reward-container">
-  <div>坚持原创技术分享, 您的支持将鼓励我继续创作!</div>
-  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/donate-wechat.jpg" alt="Hyia 微信支付">
-        <p>微信支付</p>
-      </div>
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/donate-alipay.jpg" alt="Hyia 支付宝">
-        <p>支付宝</p>
-      </div>
 
-  </div>
-</div>
+    <footer class="post-footer">
+          
 
-      
-        
-
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Hyia</li>
+      <strong>本文作者： </strong>Hyia
+  </li>
   <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://ilio.tech/2019/09/08/Java%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" title="Java 相关知识">https:&#x2F;&#x2F;ilio.tech&#x2F;2019&#x2F;09&#x2F;08&#x2F;Java 相关知识&#x2F;</a>
+      <strong>本文链接：</strong>
+      <a href="https://ilio.tech/2019/09/08/Java%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" title="Java 相关知识">https://ilio.tech/2019/09/08/Java 相关知识/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-creative-commons&quot;&gt;&lt;&#x2F;i&gt;BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
 </div>
 
-      
-
-      <footer class="post-footer">
-          
-            
-          
           <div class="post-tags">
-            
               <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
-            
           </div>
-        
 
         
 
           <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
+            <div class="post-nav-item">
             </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/10/21/算法库/" rel="prev" title="算法库">
+            <div class="post-nav-item">
+                <a href="/2020/10/21/%E7%AE%97%E6%B3%95%E5%BA%93/" rel="next" title="算法库">
                   算法库 <i class="fa fa-chevron-right"></i>
                 </a>
-              
             </div>
           </div>
-        
-      </footer>
-    
-  </div>
-  
-  
-  
+    </footer>
   </article>
-
-  </div>
-
-
-          </div>
-          
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-        
-        
-        
-        
-      
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Java基础"><span class="nav-text">1. Java基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-集合框架"><span class="nav-text">2. 集合框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Map"><span class="nav-text">2.1 Map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-HashMap"><span class="nav-text">2.1.1 HashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-HashSet"><span class="nav-text">2.1.2 HashSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-LinkedHashMap"><span class="nav-text">2.1.3 LinkedHashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-ConcurrentHashMap"><span class="nav-text">2.1.4 ConcurrentHashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5-HashTable"><span class="nav-text">2.1.5 HashTable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-6-HashMap-的长度为什么是2的幂次方"><span class="nav-text">2.1.6 HashMap 的长度为什么是2的幂次方</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-7-HashMap-多线程操作导致死循环问题-HashMap扩容原理"><span class="nav-text">2.1.7 HashMap 多线程操作导致死循环问题(HashMap扩容原理)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-8-ConcurrentHashMap-和-HashTable的区别"><span class="nav-text">2.1.8 ConcurrentHashMap 和 HashTable的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Collection"><span class="nav-text">2.2 Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-Arraylist-与-LinkedList-异同"><span class="nav-text">2.2.1 Arraylist 与 LinkedList 异同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-ArrayList-与-Vector-区别"><span class="nav-text">2.2.2 ArrayList 与 Vector 区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-copyOnWrite"><span class="nav-text">2.3 copyOnWrite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-Collection和Collections区别"><span class="nav-text">2.4 Collection和Collections区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-多线程与并发"><span class="nav-text">3. 多线程与并发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-ThreadLocal原理-对比-volitile"><span class="nav-text">3.1 ThreadLocal原理(对比 volitile)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-什么是上下文切换"><span class="nav-text">3.2 什么是上下文切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-用户态和内核态"><span class="nav-text">3.3 用户态和内核态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-CAS-ABA问题"><span class="nav-text">3.4 CAS, ABA问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-各种锁"><span class="nav-text">3.5 各种锁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-1-自旋-互斥-读写"><span class="nav-text">3.5.1 自旋, 互斥, 读写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-2-乐观锁-悲观锁"><span class="nav-text">3.5.2 乐观锁, 悲观锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-3-CLH-MCS"><span class="nav-text">3.5.3 CLH, MCS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-3-1-CLH"><span class="nav-text">3.5.3.1 CLH</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-5-3-2-MCS"><span class="nav-text">3.5.3.2 MCS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-4-可重入锁-不可重入锁"><span class="nav-text">3.5.4 可重入锁, 不可重入锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-5-synchronized"><span class="nav-text">3.5.5 synchronized</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-1-基本概念和使用"><span class="nav-text">3.5.5.1 基本概念和使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-2-原理-难点"><span class="nav-text">3.5.5.2 原理(难点)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-3-synchronized和ReentrantLock"><span class="nav-text">3.5.5.3 synchronized和ReentrantLock</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-AQS实现原理-java并发包的了解"><span class="nav-text">3.6 AQS实现原理(java并发包的了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-1-基本"><span class="nav-text">3.6.1 基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-2-资源共享方式"><span class="nav-text">3.6.2 资源共享方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-3-模板方法模式-设计模式"><span class="nav-text">3.6.3 模板方法模式(设计模式)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3-1-基本"><span class="nav-text">3.6.3.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3-2-应用"><span class="nav-text">3.6.3.2 应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-Atomic"><span class="nav-text">3.7 Atomic</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-1-Atomic原子类-使用"><span class="nav-text">3.7.1 Atomic原子类, 使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-2-原理"><span class="nav-text">3.7.2 原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-多线程"><span class="nav-text">3.8 多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-1-wait方法和sleep方法的区别"><span class="nav-text">3.8.1 wait方法和sleep方法的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-2-Java线程池原理"><span class="nav-text">3.8.2 Java线程池原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-3-设置线程数一般基于哪些考虑"><span class="nav-text">3.8.3 设置线程数一般基于哪些考虑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-4-为什么要用线程池"><span class="nav-text">3.8.4 为什么要用线程池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-5-如何创建线程池"><span class="nav-text">3.8.5 如何创建线程池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-6-实现Runnable接口和Callable接口的区别"><span class="nav-text">3.8.6 实现Runnable接口和Callable接口的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-7-执行execute-方法和submit-方法的区别是什么呢？"><span class="nav-text">3.8.7 执行execute()方法和submit()方法的区别是什么呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-8-Latch-Barrier-Semaphore使用场景"><span class="nav-text">3.8.8 Latch, Barrier, Semaphore使用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-1-CountDownLatch"><span class="nav-text">3.8.8.1 CountDownLatch</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-2-CyclicBarrier"><span class="nav-text">3.8.8.2 CyclicBarrier</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8-3-Semaphore"><span class="nav-text">3.8.8.3 Semaphore</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-9-Future-FutureTask-CompletionService的使用-JUC的了解"><span class="nav-text">3.8.9 Future, FutureTask, CompletionService的使用(JUC的了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-9-1-Future-FutureTask"><span class="nav-text">3.8.9.1 Future, FutureTask</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-9-2-CompletionService"><span class="nav-text">3.8.9.2 CompletionService</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-JVM"><span class="nav-text">4. JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-内存结构"><span class="nav-text">4.1 内存结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-GC"><span class="nav-text">4.2 GC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-ClassLoader"><span class="nav-text">4.3 ClassLoader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-new-一个对象的过程中发生了什么"><span class="nav-text">4.4 new 一个对象的过程中发生了什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-调优"><span class="nav-text">4.5 调优</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-JIT"><span class="nav-text">4.6 JIT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Spring"><span class="nav-text">5. Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-基本"><span class="nav-text">5.1 基本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-Bean作用域"><span class="nav-text">5.1.1 Bean作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-IOC"><span class="nav-text">5.1.2 IOC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3-AOP"><span class="nav-text">5.1.3 AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-1-基本"><span class="nav-text">5.1.3.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-2-代理模式"><span class="nav-text">5.1.3.2 代理模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-3-应用场景"><span class="nav-text">5.1.3.3 应用场景</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4-请求过程"><span class="nav-text">5.1.4 请求过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-4-1-Servlet生命周期"><span class="nav-text">5.1.4.1 Servlet生命周期</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-4-2-过程"><span class="nav-text">5.1.4.2 过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-相关应用"><span class="nav-text">5.2 相关应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-Mybatis"><span class="nav-text">5.2.1 Mybatis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2-事务"><span class="nav-text">5.2.2 事务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-设计模式"><span class="nav-text">5.3 设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-Spring生态"><span class="nav-text">5.4 Spring生态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-树-堆"><span class="nav-text">6. 树, 堆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-树"><span class="nav-text">6.1 树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-堆"><span class="nav-text">6.2 堆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-MySQL"><span class="nav-text">7. MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-ACID原则是什么-隔离级别包含哪些-基础"><span class="nav-text">7.1 ACID原则是什么, 隔离级别包含哪些(基础)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-MyIsam和InnoDB的各种区别-数据库引擎相关"><span class="nav-text">7.2 MyIsam和InnoDB的各种区别(数据库引擎相关)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-索引的底层数据结构-联合索引的生效规则-索引相关"><span class="nav-text">7.3 索引的底层数据结构, 联合索引的生效规则(索引相关)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-sql查询优化实践经验-explain-profile的使用-sql调优经验"><span class="nav-text">7.4 sql查询优化实践经验, explain, profile的使用(sql调优经验)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-分库分表相关的了解"><span class="nav-text">7.5 分库分表相关的了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-A、B两表-找出ID字段中-存在A表-但是不存在B表的数据"><span class="nav-text">7.6 A、B两表, 找出ID字段中, 存在A表, 但是不存在B表的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-为什么索引能提高查询速度"><span class="nav-text">7.7 为什么索引能提高查询速度?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-8-Mysql如何为表字段添加索引？"><span class="nav-text">7.8 Mysql如何为表字段添加索引？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-9-大表的常见优化手段"><span class="nav-text">7.9 大表的常见优化手段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-网络编程与操作系统"><span class="nav-text">8. 网络编程与操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-网络协议"><span class="nav-text">8.1 网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-1-TCP-UDP"><span class="nav-text">8.1.1 TCP, UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-2-TCP的三次握手-四次挥手"><span class="nav-text">8.1.2 TCP的三次握手, 四次挥手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-3-HTTP-HTTPS"><span class="nav-text">8.1.3 HTTP, HTTPS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-1-HTTP"><span class="nav-text">8.1.3.1 HTTP</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-2-RSA加密"><span class="nav-text">8.1.3.2 RSA加密</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-3-3-HTTPS"><span class="nav-text">8.1.3.3 HTTPS</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-4-长连接-短连接"><span class="nav-text">8.1.4 长连接, 短连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-5-在浏览器中输入url地址到显示主页的过程"><span class="nav-text">8.1.5 在浏览器中输入url地址到显示主页的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-6-IO-NIO"><span class="nav-text">8.1.6 IO/NIO</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-7-零拷贝"><span class="nav-text">8.1.7 零拷贝</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-操作系统"><span class="nav-text">8.2 操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-1-基本概念"><span class="nav-text">8.2.1 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-2-算法"><span class="nav-text">8.2.2 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-2-1-磁盘调度-电梯调度"><span class="nav-text">8.2.2.1 磁盘调度/电梯调度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-2-2-缓存淘汰算法-LRU-LFU-FIFO"><span class="nav-text">8.2.2.2 缓存淘汰算法: LRU, LFU, FIFO</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-3-信号量-互斥锁-不好理解"><span class="nav-text">8.2.3 信号量, 互斥锁 (不好理解)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-4-Linux"><span class="nav-text">8.2.4 Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-4-1-文件系统"><span class="nav-text">8.2.4.1 文件系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-4-2-常见的-Linux-命令"><span class="nav-text">8.2.4.2 常见的 Linux 命令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-5-进程间通讯的方式有哪些"><span class="nav-text">8.2.5 进程间通讯的方式有哪些</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-分布式"><span class="nav-text">9. 分布式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-Redis"><span class="nav-text">9.1 Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-为什么要用-redis缓存"><span class="nav-text">9.1.1 为什么要用 redis缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-为什么要用-redis-而不用-map-guava-做缓存"><span class="nav-text">9.1.2 为什么要用 redis 而不用 map/guava 做缓存?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-3-redis-和-memcached-的区别"><span class="nav-text">9.1.3 redis 和 memcached 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-4-常见数据结构"><span class="nav-text">9.1.4 常见数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-5-过期时间-内存淘汰机制-内容不多"><span class="nav-text">9.1.5 过期时间, 内存淘汰机制 (内容不多)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-6-持久化机制"><span class="nav-text">9.1.6 持久化机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-7-事务"><span class="nav-text">9.1.7 事务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-8-缓存雪崩-缓存穿透"><span class="nav-text">9.1.8 缓存雪崩, 缓存穿透</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-9-并发竞争-Key-问题"><span class="nav-text">9.1.9 并发竞争 Key 问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-10-如何保证缓存与数据库双写时的数据一致性"><span class="nav-text">9.1.10 如何保证缓存与数据库双写时的数据一致性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-11-分布式锁"><span class="nav-text">9.1.11 分布式锁</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-消息队列"><span class="nav-text">9.2 消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-什么是消息队列？为什么要用消息队列？"><span class="nav-text">9.2.1  什么是消息队列？为什么要用消息队列？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-使用消息队列带来的一些问题"><span class="nav-text">9.2.1 使用消息队列带来的一些问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-3-常见消息队列"><span class="nav-text">9.2.3 常见消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-3-1-RabbitMQ"><span class="nav-text">9.2.3.1 RabbitMQ</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-3-2-常见消息队列对比"><span class="nav-text">9.2.3.2 常见消息队列对比</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-4-JMS"><span class="nav-text">9.2.4 JMS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-1-基本"><span class="nav-text">9.2.4.1 基本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-2-JMS两种消息模型"><span class="nav-text">9.2.4.2 JMS两种消息模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-2-4-3-JMS五种消息类型"><span class="nav-text">9.2.4.3 JMS五种消息类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-ZooKeeper"><span class="nav-text">9.3 ZooKeeper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-RPC"><span class="nav-text">9.4 RPC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-1-基本"><span class="nav-text">9.4.1 基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-2-原理"><span class="nav-text">9.4.2 原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-3-Dubbo"><span class="nav-text">9.4.3 Dubbo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-1-什么是Dubbo"><span class="nav-text">9.4.3.1 什么是Dubbo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-2-为什么要使用Dubbo"><span class="nav-text">9.4.3.2 为什么要使用Dubbo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-3-Dubbo-工作原理"><span class="nav-text">9.4.3.3 Dubbo 工作原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-4-负载均衡"><span class="nav-text">9.4.3.4 负载均衡</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-5-ZooKeeper宕机与dubbo直连的情况"><span class="nav-text">9.4.3.5 ZooKeeper宕机与dubbo直连的情况</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-布隆过滤器"><span class="nav-text">9.5 布隆过滤器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-分布式一致性"><span class="nav-text">9.6 分布式一致性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-算法"><span class="nav-text">10 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-数据结构"><span class="nav-text">10.1 数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-基本类型"><span class="nav-text">10.2 基本类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-常见问题"><span class="nav-text">10.3 常见问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-系统设计"><span class="nav-text">11. 系统设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-业务系统核心架构图"><span class="nav-text">11.1 业务系统核心架构图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-如何保证DB和缓存的一致性"><span class="nav-text">11.2 如何保证DB和缓存的一致性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-缓存使用的关注点"><span class="nav-text">11.3 缓存使用的关注点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-4-设计一个高吞吐量的系统"><span class="nav-text">11.4 设计一个高吞吐量的系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-微信发红包设计方案"><span class="nav-text">11.5 微信发红包设计方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-6-限流-降级-高可用-容灾-水平扩容等"><span class="nav-text">11.6 限流, 降级, 高可用, 容灾, 水平扩容等</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-1-限流-降级"><span class="nav-text">11.6.1 限流, 降级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-2-高可用"><span class="nav-text">11.6.2 高可用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-3-容灾-水平扩容"><span class="nav-text">11.6.3 容灾, 水平扩容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-7-负载均衡"><span class="nav-text">11.7 负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-8-一致性哈希的原理"><span class="nav-text">11.8 一致性哈希的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-9-分布式事务"><span class="nav-text">11.9 分布式事务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-其他"><span class="nav-text">12. 其他</span></a></li></ol></div>
-        
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="/images/avatar.jpg"
-      alt="Hyia">
-  <p class="site-author-name" itemprop="name">Hyia</p>
-  <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-          
-            <a href="/tags/">
-          
-        
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
-      </div>
-    
-  </nav>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="https://github.com/grsky360" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;grsky360" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;</a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="mailto:gsky360@gmail.com" title="Email &amp;rarr; mailto:gsky360@gmail.com" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-envelope&quot;&gt;&lt;&#x2F;i&gt;</a>
-      </span>
-    
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP备19014583号-1 </a>
   </div>
 
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP备19014583号-1 </a>
-  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" rel="noopener" target="_blank"> </a>&copy; 2019 – <span itemprop="copyrightYear">2021</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+<div class="copyright">
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Hyia</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
     <span title="站点总字数">16k</span>
-    <span class="post-meta-divider">|</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
     <span title="站点阅读时长">14 分钟</span>
+  </span>
 </div>
-
-        
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-user"></i>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
     </span>
-    <span class="site-uv" title="总访客量">
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
     </span>
-  
-    <span class="post-meta-divider">|</span>
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-eye"></i>
-    </span>
-    <span class="site-pv" title="总访问量">
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
 
-  
-
-
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/muse.js?v=7.4.0"></script>
-
-<script src="/js/next-boot.js?v=7.4.0"></script>
-
-
+    </div>
+  </footer>
 
   
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
+  
+<script src="/js/local-search.js"></script>
 
 
 
@@ -1229,10 +1087,11 @@
 
 
   
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-  
 
-  
+
+
 
 </body>
 </html>
