@@ -4,6 +4,3 @@ db.json
 *.log
 node_modules/
 .deploy*/
-yarn.lock
-package-lock.json
-GIT_LAST_CHANGE_MESSAGE
