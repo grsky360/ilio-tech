@@ -13,13 +13,6 @@ steps:
       - mkdir -p /deployment && rm -rf /deployment/*
       - mv public/* /deployment/
 
-  volumes:
-  - name: cache
-    path: /tmp/cache
-  commands:
-  - npm install
-  - npm test
-
 volumes:
 - name: deployment
   host:
