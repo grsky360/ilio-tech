@@ -4,6 +4,23 @@ name: default
 steps:
   - name: build
     image: node:alpine
+    volumes:
+      - name: deployment
+        path: /deployment
     commands:
-      - npm install
-      - npm run build
+      - yarn
+      - yarn build
+      - mkdir -p /deployment && rm -rf /deployment/*
+      - mv public/* /deployment/
+
+  volumes:
+  - name: cache
+    path: /tmp/cache
+  commands:
+  - npm install
+  - npm test
+
+volumes:
+- name: deployment
+  host:
+    path: /yang/data/static-pages/tmp.ilio.tech
