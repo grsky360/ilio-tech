@@ -16,4 +16,4 @@ steps:
 volumes:
 - name: deployment
   host:
-    path: /yang/data/static-pages/tmp.ilio.tech
+    path: /yang/data/static-pages/ilio.tech
