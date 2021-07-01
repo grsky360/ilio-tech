@@ -1,6 +1,9 @@
 kind: pipeline
 name: default
 
+concurrency:
+  limit: 1
+
 steps:
   - name: build
     image: node:alpine
