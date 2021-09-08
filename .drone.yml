@@ -1,20 +1,22 @@
 kind: pipeline
 name: default
+type: docker
 
-concurrency:
-  limit: 1
+trigger:
+  event:
+    - custom
+
+clone:
+  disable: true
 
 steps:
-  - name: build
-    image: node:alpine
+  - name: deploy
+    image: ghcr.io/grsky360/devion-web
+    environment:
+      DEPLOYMENT_PATH: /deployment
     volumes:
       - name: deployment
         path: /deployment
-    commands:
-      - yarn
-      - yarn build
-      - mkdir -p /deployment && rm -rf /deployment/*
-      - mv public/* /deployment/
 
 volumes:
 - name: deployment

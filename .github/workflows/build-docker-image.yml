@@ -1,0 +1,44 @@
+name: Build ilio.tech
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-ilio-tech:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build the Docker image
+        run: |
+          docker build -t ghcr.io/grsky360/ilio-tech:latest .
+          docker tag ghcr.io/grsky360/ilio-tech:latest grsky360/ilio-tech:latest
+
+      - name: Push ghcr.io registry
+        run: |
+          echo "${{ secrets.PACKAGE_GITHUB_TOKEN }}" | docker login ghcr.io -u grsky360 --password-stdin
+          docker push ghcr.io/grsky360/ilio-tech:latest
+
+      - name: Push dockerhub registry
+        run: |
+          echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u grsky360 --password-stdin
+          docker push grsky360/ilio-tech:latest
+
+  trigger-drone:
+    runs-on: ubuntu-latest
+    needs:
+      - build-ilio-tech
+    steps:
+      - uses: chrislennon/action-drone@v1
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        with:
+          version: 1.3.0
+      - name: Trigger drone
+        env:
+          DRONE_SERVER: https://ci.ilio.tech
+          DRONE_TOKEN: ${{ secrets.DRONE_TOKEN }}
+        run: drone build create --commit ${{ github.sha }} grsky360/ilio-tech
