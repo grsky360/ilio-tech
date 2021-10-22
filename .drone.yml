@@ -11,7 +11,8 @@ clone:
 
 steps:
   - name: deploy
-    image: ghcr.io/grsky360/ilio-tech
+    # image: ghcr.io/grsky360/ilio-tech
+    image: grsky360/ilio-tech
     environment:
       DEPLOYMENT_PATH: /deployment
     volumes:
