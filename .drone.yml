@@ -11,8 +11,8 @@ clone:
 
 steps:
   - name: deploy
-    # image: ghcr.io/grsky360/ilio-tech
-    image: grsky360/ilio-tech
+    # image: ghcr.io/grsky360/ilio-top
+    image: grsky360/ilio-top
     environment:
       DEPLOYMENT_PATH: /deployment
     volumes:
@@ -22,4 +22,4 @@ steps:
 volumes:
 - name: deployment
   host:
-    path: /yang/data/static-pages/ilio.tech
+    path: /yang/data/static-pages/ilio.top
