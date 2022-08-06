@@ -30,6 +30,7 @@ m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
 
 ### 2. 中断
 就是需要手动执行 git rebase --continue
+仅在中断状态下, 可以执行git rebase --abort来退出rebase操作, 会恢复到rebase之前的状态
 以下两种常见的场景场景会出现中断
 1. edit command
 2. 出现冲突
