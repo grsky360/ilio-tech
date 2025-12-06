@@ -5,7 +5,6 @@ reward: true
 ---
 
 ## git rebase
-<!--more-->
 
 ### 1. Commands
 ```
