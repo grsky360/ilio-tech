@@ -1,1 +1,1 @@
-[![Build Status](https://ci.ilio.top/api/badges/grsky360/ilio-tech/status.svg)](https://ci.ilio.tech/grsky360/ilio-tech)
+[![Build and deploy](https://github.com/grsky360/ilio-tech/actions/workflows/hugo.yaml/badge.svg)](https://github.com/grsky360/ilio-tech/actions/workflows/hugo.yaml)
