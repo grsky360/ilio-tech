@@ -5,7 +5,7 @@ reward: true
 ---
 
 ## git rebase
-
+<!--more-->
 ### 1. Commands
 ```
 p, pick <提交> = 使用提交 
