@@ -1,9 +1,10 @@
 baseURL = 'https://ilio.top/'
 defaultContentLanguage = "zh"
-languageCode = 'zh'
+languageCode = 'zh-Hans'
 title = 'ILIO'
 theme = 'dream'
 ignoreLogs = ['warning-goldmark-raw-html']
+hasCJKLanguage = true
 
 # [services]
 # [services.disqus]
