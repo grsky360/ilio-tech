@@ -1,0 +1,76 @@
+baseURL = 'https://ilio.top/'
+defaultContentLanguage = "zh"
+languageCode = 'zh'
+title = 'ILIO'
+theme = 'dream'
+ignoreLogs = ['warning-goldmark-raw-html']
+
+# [services]
+# [services.disqus]
+# shortname = ""
+# [services.googleAnalytics]
+# ID = ""
+
+[params]
+# zenMode = true
+
+lightTheme = "emerald"
+darkTheme = "forest"
+
+# backgroundImage = "img/global-background.jpg"
+# backgroundImageDark = ""
+
+author = "Hyia"
+# description = ""
+avatar = "avatar.jpg"
+headerTitle = "ILIO"
+# motto = ""
+
+footerBottomText = "<a href=\"https://beian.miit.gov.cn/\">京ICP备19014583号-2</a>"
+
+# rss = true
+
+# utterancesRepo = ""
+
+# valine = true
+# LEANCLOUD_APP_ID = ""
+# LEANCLOUD_APP_KEY = ""
+
+# waline = true
+# walineServer = ""
+
+# email = ""
+
+siteStartYear = 2019
+
+favicon = "logo-16x16.jpeg"
+
+# Syntax highlighting
+# customSyntaxHighlighting = true
+
+# options
+# stickyNav = true
+# reorderNavItems = ["about", "search", "rss", "posts", "categories", "tags"]
+# collapseNavItems = ["posts", "categories", "tags"]
+# noDefaultSummaryCover = true
+showTableOfContents = true
+# showSummaryCoverInPost = true
+# imageZoomableInPost = true
+# showPrevNextPost = true
+# reorderShares = ["x", "facebook", "whatsapp"]
+
+# [params.navItems]
+
+# [params.twikoo]
+# enabled = true
+# envID = ""
+# region = ""
+# lang = ""
+
+# [params.advanced]
+# customCSS = ["css/custom.css"]
+# customJS = []
+
+# [params.experimental]
+# jsDate = true
+# jsDateFormat = "yyyy年MM月dd日"
