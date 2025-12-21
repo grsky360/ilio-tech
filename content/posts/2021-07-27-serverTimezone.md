@@ -1,7 +1,6 @@
 ---
 title: MySQL JDBC serverTimezone
 # tag: 面试
-reward: true
 ---
 
 ## serverTimezone

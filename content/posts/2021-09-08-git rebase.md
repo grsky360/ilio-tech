@@ -1,7 +1,6 @@
 ---
 title: git rebase
 # tag: 面试
-reward: true
 ---
 
 ## git rebase

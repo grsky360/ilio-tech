@@ -5,6 +5,7 @@ title = 'ILIO'
 theme = 'dream'
 ignoreLogs = ['warning-goldmark-raw-html']
 hasCJKLanguage = true
+summaryLength = 0
 
 # [services]
 # [services.disqus]
