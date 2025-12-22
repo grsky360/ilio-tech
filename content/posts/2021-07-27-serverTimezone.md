@@ -1,10 +1,11 @@
 ---
 title: MySQL JDBC serverTimezone
 share: true
+date: 2025-11-23 15:55 +08:00
+lastmod: 2025-12-22 22:36 +08:00
 ---
 
 ## serverTimezone
-<!-- more -->
 
 ### 前提
 1. serverTimezone = UTC
