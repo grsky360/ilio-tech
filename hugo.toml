@@ -59,9 +59,9 @@ favicon = "logo-16x16.jpeg"
 # collapseNavItems = ["posts", "categories", "tags"]
 # noDefaultSummaryCover = true
 showTableOfContents = true
-# showSummaryCoverInPost = true
+showSummaryCoverInPost = true
 # imageZoomableInPost = true
-# showPrevNextPost = true
+showPrevNextPost = true
 # reorderShares = ["x", "facebook", "whatsapp"]
 
 # [params.navItems]
