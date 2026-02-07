@@ -5,7 +5,7 @@ title: openclaw 部署指南
 share: true
 ---
 ## 简介
-本文所配置环境均为云服务器
+> 本文所配置环境均为云服务器
 
 ## 前置条件
 - 一台服务器
@@ -18,6 +18,73 @@ share: true
 
 ## 步骤
 
+### 1. 准备docker-compose
+参照: [docker-images/llm/openclaw at master · grsky360/docker-images · GitHub](https://github.com/grsky360/docker-images/tree/master/llm/openclaw)
+- 使用 traefik 参考: [docker-compose-traefik.yml](https://github.com/grsky360/docker-images/blob/master/llm/openclaw/docker-compose-traefik.yml "docker-compose-traefik.yml")
+- 不使用 traefik 参考: [docker-compose.yml](https://github.com/grsky360/docker-images/blob/master/llm/openclaw/docker-compose.yml "docker-compose.yml")
+
+### 2. setup环境
+以下命令会交互式进行设置
+```
+docker compose run --rm openclaw onboard
+```
+
+### 3. 启动openclaw
+```
+docker compose up -d
+```
+
+### 4. 获取 gateway token 并保存
+```
+docker compose exec openclaw node dist/index.js config get gateway.auth.token
+```
+
+### 5. 登录页面进行设备配对
+1. 访问地址, 例如: http://localhost:12345/overview
+2. 填写你的 token
+	1. 如果 token 不正确会提示: disconnected (1008): unauthorized: gateway token mismatch (open a tokenized dashboard URL or paste token in Control UI settings)
+3. 如果没有打开 insecureAuth
+	1. 回到服务器
+	2. 执行以下命令
+	   ```
+	   openclaw devices list # 确认 pending approve 的设备列表
+	   openclaw devices approve {requestId} # 找到你的设备的 requestId 进行 approve
+	   ```
+	3. approve 之后, 回到页面, 会变成 Connected
+
+
+#### 常见问题
+1. disconnected (1008): unauthorized: gateway token mismatch (open a tokenized dashboard URL or paste token in Control UI settings)
+	1. 输入的 token 或者 password 不正确
+2. disconnected (1008): pairing required
+	1. 需要服务器配对
+
+## 有用的命令
+### 1. 执行任意 CLI 命令
+仅在 onboard 并且启动 gateway 之后有效
+```
+alias openclaw="docker compose exec openclaw node dist/index.js"
+```
+
+
+### 2. 管理当前 gateway auth
+```
+获取当前 auth mode: openclaw config get gateway.auth.mode
+
+设置为 token mode: openclaw config set gateway.auth.mode token
+获取 auth token: openclaw config get gateway.auth.token
+设置 auth token: openclaw config set gateway.auth.token XXX
+
+设置为 password mode: openclaw config set gateway.auth.mode password
+获取 auth password: openclaw config get gateway.auth.password
+设置 auth password: openclaw config set gateway.auth.password
+```
+
+### 3. 关闭 web pairing (慎重)
+```
+openclaw config set gateway.controlUi.allowInsecureAuth true
+docker compose restart
+```
 
 
 ## 参考资料
