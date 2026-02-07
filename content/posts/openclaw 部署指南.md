@@ -1,6 +1,6 @@
 ---
 date: 2026-02-07 20:17:33 +08:00
-lastmod: 2026-02-07 20:20:44 +08:00
+lastmod: 2026-02-07 23:38:09 +08:00
 title: openclaw 部署指南
 share: true
 ---
@@ -19,7 +19,9 @@ share: true
 ## 步骤
 
 ### 1. 准备docker-compose
-参照: [docker-images/llm/openclaw at master · grsky360/docker-images · GitHub](https://github.com/grsky360/docker-images/tree/master/llm/openclaw)
+由于官方的docker-compose太过于冗余，并且有的配置是不生效的(预定义token)，因此精简了一下内容
+
+具体可以参照: [docker-images/llm/openclaw at master · grsky360/docker-images · GitHub](https://github.com/grsky360/docker-images/tree/master/llm/openclaw)
 - 使用 traefik 参考: [docker-compose-traefik.yml](https://github.com/grsky360/docker-images/blob/master/llm/openclaw/docker-compose-traefik.yml "docker-compose-traefik.yml")
 - 不使用 traefik 参考: [docker-compose.yml](https://github.com/grsky360/docker-images/blob/master/llm/openclaw/docker-compose.yml "docker-compose.yml")
 
@@ -42,7 +44,7 @@ docker compose exec openclaw node dist/index.js config get gateway.auth.token
 ### 5. 登录页面进行设备配对
 1. 访问地址, 例如: http://localhost:12345/overview
 2. 填写你的 token
-	1. 如果 token 不正确会提示: disconnected (1008): unauthorized: gateway token mismatch (open a tokenized dashboard URL or paste token in Control UI settings)
+	1. 如果 token 不正确会提示: disconnected (1008): unauthorized: gateway token mismatch
 3. 如果没有打开 insecureAuth
 	1. 回到服务器
 	2. 执行以下命令
