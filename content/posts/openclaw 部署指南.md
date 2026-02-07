@@ -53,11 +53,13 @@ docker compose exec openclaw node dist/index.js config get gateway.auth.token
 	3. approve 之后, 回到页面, 会变成 Connected
 
 
-#### 常见问题
-1. disconnected (1008): unauthorized: gateway token mismatch (open a tokenized dashboard URL or paste token in Control UI settings)
-	1. 输入的 token 或者 password 不正确
-2. disconnected (1008): pairing required
-	1. 需要服务器配对
+## 常见问题
+disconnected (1008): unauthorized: gateway token mismatch (open a tokenized dashboard URL or paste token in Control UI settings)
+> 输入的 token 或者 password 不正确
+
+disconnected (1008): pairing required
+> 需要服务器进行 device pairing 和 approve
+
 
 ## 有用的命令
 ### 1. 执行任意 CLI 命令
