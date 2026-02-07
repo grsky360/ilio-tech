@@ -1,6 +1,6 @@
 ---
 date: 2026-02-07 20:17:33 +08:00
-lastmod: 2026-02-07 23:38:09 +08:00
+lastmod: 2026-02-08 00:00:14 +08:00
 title: openclaw 部署指南
 share: true
 ---
@@ -14,7 +14,7 @@ share: true
 
 ## 所需Docker镜像
 - openclaw: [alpine/openclaw - Docker Image](https://hub.docker.com/r/alpine/openclaw)
-- one-api: [Package one-api · GitHub](https://github.com/songquanpeng/one-api/pkgs/container/one-api)
+- (可选，AI Gateway) one-api: [Package one-api · GitHub](https://github.com/songquanpeng/one-api/pkgs/container/one-api)
 
 ## 步骤
 
