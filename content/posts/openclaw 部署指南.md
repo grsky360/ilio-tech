@@ -23,12 +23,14 @@ share: true
 
 具体可以参照: [docker-images/llm/openclaw at master · grsky360/docker-images · GitHub](https://github.com/grsky360/docker-images/tree/master/llm/openclaw)
 - 使用 traefik 参考: [docker-compose-traefik.yml](https://github.com/grsky360/docker-images/blob/master/llm/openclaw/docker-compose-traefik.yml "docker-compose-traefik.yml")
+	- 测试不能通过 chrome 进行访问，Traefik 对 RFC 8441不支持
+	- [websocket with http/2 cleartext lead to http 500 · Issue #7465 · traefik/traefik · GitHub](https://github.com/traefik/traefik/issues/7465)
 - 不使用 traefik 参考: [docker-compose.yml](https://github.com/grsky360/docker-images/blob/master/llm/openclaw/docker-compose.yml "docker-compose.yml")
 
 ### 2. setup环境
 以下命令会交互式进行设置
 ```
-docker compose run --rm openclaw onboard
+docker compose run --rm openclaw onboard --no-install-daemon
 ```
 
 > Onboarding complete. Use the tokenized dashboard link above to control OpenClaw.
