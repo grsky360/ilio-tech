@@ -31,6 +31,10 @@ share: true
 docker compose run --rm openclaw onboard
 ```
 
+> Onboarding complete. Use the tokenized dashboard link above to control OpenClaw.
+
+等到有这个提示的时候就是 onboard 好了，可以 control+C 结束
+
 ### 3. 启动openclaw
 ```
 docker compose up -d
