@@ -69,7 +69,8 @@ disconnected (1008): pairing required
 
 ## 有用的命令
 ### 1. 执行任意 CLI 命令
-仅在 onboard 并且启动 gateway 之后有效
+- 仅在 onboard 并且启动 gateway 之后有效
+- 仅限在 docker-compose 目录执行
 ```
 alias openclaw="docker compose exec openclaw node dist/index.js"
 ```
